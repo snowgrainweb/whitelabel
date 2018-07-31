@@ -13,7 +13,7 @@ using CarouselView.FormsPlugin.Android;
 
 namespace SnowGrain.Droid
 {
-	[Activity (Label = "White Label", Icon = "@drawable/blank", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Label = "White Label", Icon = "@drawable/blank", MainLauncher = false, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
 	{
 		protected override void OnCreate (Bundle bundle)

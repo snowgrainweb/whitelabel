@@ -42,6 +42,8 @@
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Debug/res/drawable-hdpi/web_hi_res_512.png
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Debug/res/drawable-xhdpi/web_hi_res_512.png
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Debug/res/drawable-xxhdpi/web_hi_res_512.png
+/Users/Riju/Downloads/MasterDetailPage/Droid/obj/Debug/res/drawable/splash_screen.xml
+/Users/Riju/Downloads/MasterDetailPage/Droid/obj/Debug/res/values/styles.xml
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Debug/R.cs.flag
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Debug/R.txt
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Debug/uploadflags.txt

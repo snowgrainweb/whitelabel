@@ -58,10 +58,16 @@ namespace SnowGrain.Droid
 			public static int Resources.Designer = 0;
 			
 			// aapt resource value: 0
+			public static int splash_screen = 0;
+			
+			// aapt resource value: 0
 			public static int support = 0;
 			
 			// aapt resource value: 0
 			public static int todo = 0;
+			
+			// aapt resource value: 0
+			public static int web_hi_res_512 = 0;
 			
 			static Drawable()
 			{
@@ -69,6 +75,28 @@ namespace SnowGrain.Droid
 			}
 			
 			private Drawable()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0
+			public static int MyTheme = 0;
+			
+			// aapt resource value: 0
+			public static int MyTheme_Base = 0;
+			
+			// aapt resource value: 0
+			public static int MyTheme_Splash = 0;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}

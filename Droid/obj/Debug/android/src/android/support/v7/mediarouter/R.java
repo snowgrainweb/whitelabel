@@ -3193,13 +3193,13 @@ containing a value of this type.
         public static int abc_textfield_search_material=0x7f020051;
         public static int abc_vector_test=0x7f020052;
         public static int avd_hide_password=0x7f020053;
-        public static int avd_hide_password_1=0x7f02013e;
-        public static int avd_hide_password_2=0x7f02013f;
-        public static int avd_hide_password_3=0x7f020140;
+        public static int avd_hide_password_1=0x7f02013f;
+        public static int avd_hide_password_2=0x7f020140;
+        public static int avd_hide_password_3=0x7f020141;
         public static int avd_show_password=0x7f020054;
-        public static int avd_show_password_1=0x7f020141;
-        public static int avd_show_password_2=0x7f020142;
-        public static int avd_show_password_3=0x7f020143;
+        public static int avd_show_password_1=0x7f020142;
+        public static int avd_show_password_2=0x7f020143;
+        public static int avd_show_password_3=0x7f020144;
         public static int blank=0x7f020055;
         public static int connection=0x7f020056;
         public static int contacts=0x7f020057;
@@ -3421,18 +3421,19 @@ containing a value of this type.
         public static int notification_bg_normal=0x7f02012f;
         public static int notification_bg_normal_pressed=0x7f020130;
         public static int notification_icon_background=0x7f020131;
-        public static int notification_template_icon_bg=0x7f02013c;
-        public static int notification_template_icon_low_bg=0x7f02013d;
+        public static int notification_template_icon_bg=0x7f02013d;
+        public static int notification_template_icon_low_bg=0x7f02013e;
         public static int notification_tile_bg=0x7f020132;
         public static int notify_panel_notification_icon_bg=0x7f020133;
         public static int prev=0x7f020134;
         public static int reminders=0x7f020135;
-        public static int support=0x7f020136;
-        public static int todo=0x7f020137;
-        public static int tooltip_frame_dark=0x7f020138;
-        public static int tooltip_frame_light=0x7f020139;
-        public static int up=0x7f02013a;
-        public static int web_hi_res_512=0x7f02013b;
+        public static int splash_screen=0x7f020136;
+        public static int support=0x7f020137;
+        public static int todo=0x7f020138;
+        public static int tooltip_frame_dark=0x7f020139;
+        public static int tooltip_frame_light=0x7f02013a;
+        public static int up=0x7f02013b;
+        public static int web_hi_res_512=0x7f02013c;
     }
     public static final class id {
         public static int ALT=0x7f080032;
@@ -3972,6 +3973,9 @@ containing a value of this type.
         public static int CardView=0x7f0b000b;
         public static int CardView_Dark=0x7f0b000d;
         public static int CardView_Light=0x7f0b000e;
+        public static int MyTheme=0x7f0b0193;
+        public static int MyTheme_Base=0x7f0b0192;
+        public static int MyTheme_Splash=0x7f0b0194;
         public static int Platform_AppCompat=0x7f0b002d;
         public static int Platform_AppCompat_Light=0x7f0b002e;
         public static int Platform_ThemeOverlay_AppCompat=0x7f0b008e;

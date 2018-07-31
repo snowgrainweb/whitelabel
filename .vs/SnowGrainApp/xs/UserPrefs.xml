@@ -1,20 +1,16 @@
 ﻿<Properties StartupConfiguration="{94BA3405-8AC9-47A8-90B4-59DBF2D56EF0}|Default">
-  <MonoDevelop.Ide.ItemProperties.SnowGrain.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Info.plist">
+  <MonoDevelop.Ide.ItemProperties.SnowGrain.Droid PreferredExecutionTarget="Android.3d5daa457d74" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/MainActivity.cs">
     <Files>
-      <File FileName="MasterDetailPageNavigation/XAML/HomePage.xaml" Line="38" Column="15" />
-      <File FileName="MasterDetailPageNavigation/XAML/ProductDetail.xaml" Line="10" Column="50" />
-      <File FileName="MasterDetailPageNavigation/XAML/MasterPage.xaml" Line="34" Column="47" />
-      <File FileName="MasterDetailPageNavigation/XAML/MainPage.xaml" Line="11" Column="61" />
-      <File FileName="MasterDetailPageNavigation/XAML/ArticlesPage.xaml" Line="6" Column="139" />
-      <File FileName="MasterDetailPageNavigation/XAML/OffersPage.xaml" Line="41" Column="70" />
-      <File FileName="MasterDetailPageNavigation/XAML/ProductsPage.xaml" Line="38" Column="74" />
-      <File FileName="MasterDetailPageNavigation/XAML/ArticlesPage.xaml.cs" Line="90" Column="22" />
-      <File FileName="MasterDetailPageNavigation/XAML/ProductsPage.xaml.cs" Line="97" Column="7" />
-      <File FileName="MasterDetailPageNavigation/XAML/HomePage.xaml.cs" Line="1" Column="10" />
+      <File FileName="MasterDetailPageNavigation/XAML/ProductDetail.xaml" Line="33" Column="97" />
+      <File FileName="MasterDetailPageNavigation/XAML/ProductDetail.xaml.cs" Line="12" Column="35" />
+      <File FileName="MasterDetailPageNavigation/XAML/MasterPage.xaml" Line="34" Column="46" />
+      <File FileName="Droid/Resources/drawable/splash_screen.xml" Line="8" Column="35" />
+      <File FileName="Droid/Resources/values/styles.xml" Line="13" Column="10" />
+      <File FileName="Droid/SplashActivity.cs" Line="18" Column="84" />
+      <File FileName="Droid/MainActivity.cs" Line="16" Column="22" />
       <File FileName="Droid/Properties/AndroidManifest.xml" Line="6" Column="12" />
-      <File FileName="Droid/Properties/AssemblyInfo.cs" Line="1" Column="1" />
-      <File FileName="iOS/Info.plist" />
+      <File FileName="Droid/Resources/Resource.designer.cs" Line="156" Column="115" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

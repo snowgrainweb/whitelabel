@@ -22,22 +22,24 @@
                     <Label Text="White Label" TextColor="White" FontSize="23" FontAttributes="Bold"></Label>                  
                 </OnPlatform.Android>
                 <OnPlatform.iOS>
-                    <Label Text="SnowGrain" TextColor="White" FontSize="23" FontAttributes="Bold"></Label>                  
+                    <Label Text="White Label" TextColor="White" FontSize="23" FontAttributes="Bold"></Label>                  
                 </OnPlatform.iOS>
             </OnPlatform>
 
         </ContentView>
-        <ListView x:Name="listView" SeparatorVisibility="Default" SeparatorColor="#4e646b" BackgroundColor="#37484d">
+        <ListView x:Name="listView" SeparatorVisibility="Default" SeparatorColor="#4e646b" BackgroundColor="#37484d" RowHeight="50">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid Padding="10,10">
+                        <Grid Padding="10, 10">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="30"/>
                                 <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="30" />
                             </Grid.ColumnDefinitions>
-                            <Image Source="{Binding IconSource}" />
-                            <Label Grid.Column="1" Text="{Binding Title}" TextColor="White" FontSize="Medium" />
+                            <Image Source="{Binding IconSource}" VerticalOptions="Center"/>
+                            <Label Grid.Column="1" Text="{Binding Title}" TextColor="White" FontSize="Medium" VerticalOptions="Center"/>
+
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
