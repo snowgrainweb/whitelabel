@@ -11,5 +11,7 @@ namespace SnowGrain
 		public string IconSource { get; set; }
 
 		public Type TargetType { get; set; }
+
+		public string Guid { get; set; }
 	}
 }

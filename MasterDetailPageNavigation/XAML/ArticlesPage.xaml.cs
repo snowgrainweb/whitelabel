@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Net.Http;
 using System.Collections;
 using System.Text.RegularExpressions;
+using System;
+using System.Globalization;
 using Newtonsoft.Json;  
 using System.Collections.ObjectModel;  
 
@@ -32,65 +34,16 @@ namespace SnowGrain
 
 		public Articles()
         {
-            InitializeComponent();
-			contentListItems = new ObservableCollection<SnowGrain.ContentListItem>();
-			contentListItems.Add(new SnowGrain.ContentListItem
-            {
-                Title = "Product",
-                Image = "http://www.millaboratories.in/wp-content/uploads/2015/10/banner1.png",
-                Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ex, gravida quis varius in, pretium et augue. Donec bibendum rutrum enim, vitae ultricies tortor semper nec.",
-                Date = "23-07-2018",
-                ColorCode = "#66cc88"
-            });
-			contentListItems.Add(new SnowGrain.ContentListItem
-            {
-                Title = "Article",
-                Image = "https://www.solidworks.com/sites/default/files/2017-12/PRODUCT-CATEGORY-TECH-COM-inspection-MBD-shop%20floor-composer-edrawings-hero-001.jpg",
-                Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ex, gravida quis varius in, pretium et augue. Donec bibendum rutrum enim, vitae ultricies tortor semper nec.",
-                Date = "23-07-2018",
-                ColorCode = "#6688cc"
-            });
-			contentListItems.Add(new SnowGrain.ContentListItem
-            {
-                Title = "Product",
-                Image = "https://yj4dfcucm3mswcd2nbkkg14m-wpengine.netdna-ssl.com/wp-content/uploads/2017/11/featureimagesArtboard-1-100.jpg",
-                Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ex, gravida quis varius in, pretium et augue. Donec bibendum rutrum enim, vitae ultricies tortor semper nec.",
-                Date = "23-07-2018",
-                ColorCode = "#66cc88"
-            });
-
-
-            //listView1.ItemsSource = contentListItems;
+			InitializeComponent();
         }
 
 		protected override async void OnAppearing() {
 			Device.BeginInvokeOnMainThread(() => { listView1.IsRefreshing = true; listView1.BeginRefresh(); });
-			string content = await client.GetStringAsync(Url);
+			//string content = await client.GetStringAsync(Url);
 			contentListItems = new ObservableCollection<SnowGrain.ContentListItem>();
-			ArticleResponse response = JsonConvert.DeserializeObject<ArticleResponse>(content);
-			System.Diagnostics.Debug.WriteLine(content);
-			foreach(ArticleData adata in response.value){
-				ContentListItem item = new ContentListItem();
-				item.Title = adata.TemplateName;
-				item.Date = adata.Updated.ToShortDateString();               
-				item.ColorCode = "#1e1e70";
-				foreach(NameValue pair in adata.Fields) {
-					if(pair.Name == "Abstract"){
-						item.Content = Regex.Replace(pair.Value, "<.*?>", "");
-					}
-					if(pair.Name == "Tile Image") {
-						item.Image = "https://whitelabel-dxebr.d.epsilon.com/sitecore" + pair.Url;
-					}
-					if(pair.Name == "Title") {
-						item.Name = pair.Value;
-					}
-					if (pair.Name == "Description")
-                    {
-                        item.DetailImage = Regex.Replace(pair.Value, "<.*?>", "");
-                    }
-				}
-				contentListItems.Add(item);
-			}
+			ArticleResponse response = Utility.Articles;
+			//System.Diagnostics.Debug.WriteLine(content);
+			contentListItems = Utility.GetItemList(response);
 			InitializeComponent();
 			listView1.IsVisible = false;
 			listView1.ItemsSource = null;
@@ -100,9 +53,6 @@ namespace SnowGrain
 			listView1.IsVisible = true;
 			base.OnAppearing();
 		}
-		class ArticleResponse {
-			public string context { get; set; }
-			public List<ArticleData> value { get; set; }
-		}
+
     }
 }

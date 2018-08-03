@@ -57,33 +57,11 @@ namespace SnowGrain
         protected override async void OnAppearing()
         {
             Device.BeginInvokeOnMainThread(() => { listView1.IsRefreshing = true; listView1.BeginRefresh(); });
-            string content = await client.GetStringAsync(Url);
+            //string content = await client.GetStringAsync(Url);
 			contentListItems = new ObservableCollection<SnowGrain.ContentListItem>();
-            ArticleResponse response = JsonConvert.DeserializeObject<ArticleResponse>(content);
-            System.Diagnostics.Debug.WriteLine(content);
-            foreach (ArticleData adata in response.value)
-            {
-                ContentListItem item = new ContentListItem();
-                item.Title = adata.TemplateName;
-                item.Date = adata.Updated.ToShortDateString();
-				item.ColorCode = "#8914ad";
-                foreach (NameValue pair in adata.Fields)
-                {
-                    if (pair.Name == "Abstract")
-                    {
-                        item.Content = Regex.Replace(pair.Value, "<.*?>", "");
-                    }
-                    if (pair.Name == "Tile Image")
-                    {
-                        item.Image = "https://whitelabel-dxebr.d.epsilon.com/sitecore" + pair.Url;
-                    }
-					if (pair.Name == "Title")
-                    {
-                        item.Name = pair.Value;
-                    }
-                }
-                contentListItems.Add(item);
-            }
+            //ArticleResponse response = JsonConvert.DeserializeObject<ArticleResponse>(content);
+            //System.Diagnostics.Debug.WriteLine(content);
+			contentListItems = Utility.GetItemList(Utility.Articles);
             InitializeComponent();
             listView1.IsVisible = false;
             listView1.ItemsSource = null;

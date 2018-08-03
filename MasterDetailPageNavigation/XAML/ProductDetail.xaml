@@ -17,7 +17,7 @@
                 </Grid>
                 <BoxView BackgroundColor="#cccccc" HeightRequest="2" />
                 <StackLayout HorizontalOptions="FillAndExpand">
-                    <Label XAlign="Center" TextColor="Black" Text="{Binding DetailImage}">
+                    <Label XAlign="Center" TextColor="Black" Text="{Binding DetailContent}">
                     </Label>
                 </StackLayout>
                 <Grid>

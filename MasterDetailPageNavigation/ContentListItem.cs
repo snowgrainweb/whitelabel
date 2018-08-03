@@ -20,7 +20,7 @@ namespace SnowGrain
 
 		private string _ColorCode;
 
-		private string _DetailImage;
+		private string _DetailContent;
 
 		public string Title { get { return _Title; } set { OnPropertyChanged("Title"); _Title = value; }}
 
@@ -30,7 +30,7 @@ namespace SnowGrain
 
 		public string Image { get { return _Image; } set { OnPropertyChanged("Title"); _Image = value; } }
 
-		public string DetailImage { get { return _DetailImage; } set { OnPropertyChanged("Title"); _DetailImage = value; } }
+		public string DetailContent { get { return _DetailContent; } set { OnPropertyChanged("Title"); _DetailContent = value; } }
 
 		public string ColorCode { get { return _ColorCode; } set { OnPropertyChanged("Title"); _ColorCode = value; } }
 
