@@ -9,7 +9,7 @@
     <ContentPage.Content>
         
         <ScrollView>
-            <StackLayout BackgroundColor="White" Padding="15, 15, 15, 15">
+            <StackLayout BackgroundColor="White" Padding="15, 15, 15, 15">              
                 <ListView x:Name="listView1" SeparatorVisibility="None" RowHeight="290">
                     <ListView.ItemTemplate>
                         <DataTemplate>

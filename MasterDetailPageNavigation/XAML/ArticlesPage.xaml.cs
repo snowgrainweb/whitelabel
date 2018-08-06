@@ -39,11 +39,11 @@ namespace SnowGrain
 
 		protected override async void OnAppearing() {
 			Device.BeginInvokeOnMainThread(() => { listView1.IsRefreshing = true; listView1.BeginRefresh(); });
-			//string content = await client.GetStringAsync(Url);
+			string content = await client.GetStringAsync(Url);
 			contentListItems = new ObservableCollection<SnowGrain.ContentListItem>();
-			ArticleResponse response = Utility.Articles;
+			//ArticleResponse response = Utility.Articles;
 			//System.Diagnostics.Debug.WriteLine(content);
-			contentListItems = Utility.GetItemList(response);
+			contentListItems = Utility.GetItemList(content);
 			InitializeComponent();
 			listView1.IsVisible = false;
 			listView1.ItemsSource = null;

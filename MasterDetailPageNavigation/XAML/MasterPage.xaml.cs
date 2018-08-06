@@ -19,7 +19,8 @@ namespace SnowGrain
 		private const string Url = "https://whitelabel-dxebr.d.epsilon.com/api/sitecore/mobileapp/navigation";
 		public ObservableCollection<SnowGrain.MasterPageItem> masterpageItem { get; set; }
 		private readonly HttpClient client = new HttpClient();
-        public MasterPage()
+		public bool IsInProgress = true;
+		public MasterPage()
         {
             InitializeComponent();                      
 
@@ -100,16 +101,19 @@ namespace SnowGrain
 				mItem.Title = item.Title;
 				mItem.TargetType = null;
 				mItem.Guid = item.Guid;
+				mItem.IsInProgress = false;
 				masterpageItem.Add(mItem);
 			}
 			listView.ItemsSource = masterpageItem;
 			base.OnAppearing();
 		}
 	}
+    
 	class MenuItem {
 		public string Guid { get; set; }
 		public string Title { get; set; }
 		public string iconUrl { get; set; }
+		public string IsInProgress { get; set; }
 	}
 	class MenuItemResponse {
 		public List<MenuItem> NavigationList { get; set; }

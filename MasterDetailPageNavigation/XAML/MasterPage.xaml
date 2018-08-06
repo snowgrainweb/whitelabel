@@ -39,7 +39,7 @@
                             </Grid.ColumnDefinitions>
                             <Image Source="{Binding IconSource}" VerticalOptions="Center"/>
                             <Label Grid.Column="1" Text="{Binding Title}" TextColor="White" FontSize="Medium" VerticalOptions="Center"/>
-
+                            <ActivityIndicator Color="Black" IsRunning="{Binding IsInProgress}" Grid.Row="0" Grid.Column="2"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>

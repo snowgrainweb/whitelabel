@@ -46,6 +46,7 @@ namespace SnowGrain
 		}
 		protected override async void OnAppearing()
 		{
+			Device.BeginInvokeOnMainThread(() => { listView1.IsRefreshing = true; listView1.BeginRefresh(); });
 			string content = await client.GetStringAsync(Url);
 			HomeData response = JsonConvert.DeserializeObject<HomeData>(content);
 			contentListItems = new ObservableCollection<SnowGrain.ContentListItem>();
@@ -77,6 +78,7 @@ namespace SnowGrain
                 ColorCode = "#66cc88"
 
             });
+            Device.BeginInvokeOnMainThread(() => { listView1.IsRefreshing = false; listView1.EndRefresh(); });
 			listView1.ItemsSource = contentListItems;
 		}
 	}

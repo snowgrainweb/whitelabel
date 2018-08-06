@@ -15,7 +15,14 @@ namespace SnowGrain
 
         private readonly HttpClient client = new HttpClient();
 
-        public ListView ListView { get { return listView1; } }
+		public ListView ListView { get { return listView1; } }
+		void Handle_ItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
+        {
+            var content = e.Item as ContentListItem;
+            ProductDetail productDetail = new ProductDetail();
+            productDetail.BindingContext = content;
+            Navigation.PushAsync(productDetail);
+        }
 
         public bool IsBusy = true;
 
@@ -57,16 +64,16 @@ namespace SnowGrain
         protected override async void OnAppearing()
         {
             Device.BeginInvokeOnMainThread(() => { listView1.IsRefreshing = true; listView1.BeginRefresh(); });
-            //string content = await client.GetStringAsync(Url);
+            string content = await client.GetStringAsync(Url);
 			contentListItems = new ObservableCollection<SnowGrain.ContentListItem>();
             //ArticleResponse response = JsonConvert.DeserializeObject<ArticleResponse>(content);
             //System.Diagnostics.Debug.WriteLine(content);
-			contentListItems = Utility.GetItemList(Utility.Articles);
+			contentListItems = Utility.GetItemList(content);
             InitializeComponent();
             listView1.IsVisible = false;
             listView1.ItemsSource = null;
             listView1.ItemsSource = contentListItems;
-            Device.BeginInvokeOnMainThread(() => { listView1.IsRefreshing = false; listView1.EndRefresh(); });
+			Device.BeginInvokeOnMainThread(() => { listView1.IsRefreshing = false; listView1.EndRefresh(); });
             IsBusy = false;
             listView1.IsVisible = true;
             base.OnAppearing();

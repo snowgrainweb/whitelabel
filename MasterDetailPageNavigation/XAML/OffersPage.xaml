@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <ScrollView>     
             <StackLayout BackgroundColor="White" Padding="15, 15, 15, 15">
-                <ListView x:Name="listView1" SeparatorVisibility="None" RowHeight="325">
+                <ListView x:Name="listView1" SeparatorVisibility="None" RowHeight="325" ItemTapped="Handle_ItemTapped" SelectionMode="None">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

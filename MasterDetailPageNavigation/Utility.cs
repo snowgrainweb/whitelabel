@@ -31,12 +31,16 @@ namespace SnowGrain
 				item.ColorCode = GetColorCodeForTemplate(adata.TemplateName);
                 foreach (NameValue pair in adata.Fields)
                 {
-					if(pair.Name == "Abstract"){
+					if(pair.Name == "App Description"){
                         item.Content = Regex.Replace(pair.Value, "<.*?>", "");
+						item.Content = item.Content.Length <= 120 ? item.Content : item.Content.Substring(0, 117) + "...";
                     }
-                    if(pair.Name == "App Details Image") {
+					if(pair.Name == "App Details Image") {
                         item.Image = "https://whitelabel-dxebr.d.epsilon.com/sitecore" + pair.Url;
                     }
+					if(pair.Name == "App Details image" && item.Image == null){
+						item.Image = "https://whitelabel-dxebr.d.epsilon.com/sitecore" + pair.Url;
+					}
                     if(pair.Name == "App Name") {
                         item.Name = pair.Value;
                     }
@@ -72,7 +76,7 @@ namespace SnowGrain
                 item.ColorCode = GetColorCodeForTemplate(adata.TemplateName);
                 foreach (NameValue pair in adata.Fields)
                 {
-                    if (pair.Name == "Abstract")
+					if (pair.Name == "App Description")
                     {
                         item.Content = Regex.Replace(pair.Value, "<.*?>", "");
                     }
@@ -84,7 +88,7 @@ namespace SnowGrain
                     {
                         item.Name = pair.Value;
                     }
-                    if (pair.Name == "App Description")
+					if (pair.Name == "App Description")
                     {
                         item.DetailContent = Regex.Replace(pair.Value, "<.*?>", "");
                     }

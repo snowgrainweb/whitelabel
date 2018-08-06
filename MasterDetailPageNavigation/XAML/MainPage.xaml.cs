@@ -34,15 +34,18 @@ namespace SnowGrain
 			try
 			{
 				var item = e.SelectedItem as MasterPageItem;
+				item.IsInProgress = true;
 				string content = await client.GetStringAsync(Url.Replace("{id}", item.Guid));
 				ArticleResponse response = JsonConvert.DeserializeObject<ArticleResponse>(content);
 
 				if (item != null)
-				{
+				{					
 					Utility.Articles = response;
 					Detail = new NavigationPage((Page)Activator.CreateInstance(Utility.GetTargetType(response.value[0].TemplateName == "Page Data" ? response.value[1].TemplateName : response.value[0].TemplateName)));
 					masterPage.ListView.SelectedItem = null;
 					IsPresented = false;
+					item.IsInProgress = false;
+
 				}
 			} catch(Exception e1){
 				

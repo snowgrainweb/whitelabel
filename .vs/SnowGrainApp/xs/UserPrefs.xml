@@ -1,21 +1,14 @@
 ﻿<Properties StartupConfiguration="{3D54620E-23F2-462B-A824-B074D41BD507}|Default">
   <MonoDevelop.Ide.ItemProperties.SnowGrain.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MasterDetailPageNavigation/XAML/OffersPage.xaml">
     <Files>
-      <File FileName="MasterDetailPageNavigation/XAML/MainPage.xaml.cs" Line="17" Column="57" />
-      <File FileName="MasterDetailPageNavigation/XAML/ArticlesPage.xaml.cs" Line="41" Column="1" />
-      <File FileName="MasterDetailPageNavigation/Utility.cs" Line="38" Column="99" />
-      <File FileName="MasterDetailPageNavigation/XAML/ProductsPage.xaml.cs" Line="73" Column="15" />
-      <File FileName="MasterDetailPageNavigation/XAML/OffersPage.xaml.cs" Line="64" Column="59" />
-      <File FileName="MasterDetailPageNavigation/XAML/HomePage.xaml.cs" Line="52" Column="1" />
-      <File FileName="iOS/Main.cs" Line="18" Column="1" />
+      <File FileName="MasterDetailPageNavigation/XAML/ArticlesPage.xaml" Line="6" Column="140" />
+      <File FileName="MasterDetailPageNavigation/XAML/OffersPage.xaml" Line="8" Column="140" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/XAML/HomePage.xaml.cs" relfile="MasterDetailPageNavigation/XAML/HomePage.xaml.cs" line="52" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
