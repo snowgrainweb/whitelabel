@@ -46,10 +46,12 @@ namespace SnowGrain
 		}
 		protected override async void OnAppearing()
 		{
+			InitializeComponent();
 			Device.BeginInvokeOnMainThread(() => { listView1.IsRefreshing = true; listView1.BeginRefresh(); });
 			string content = await client.GetStringAsync(Url);
 			HomeData response = JsonConvert.DeserializeObject<HomeData>(content);
 			contentListItems = new ObservableCollection<SnowGrain.ContentListItem>();
+			listView1.IsVisible = false;
 			contentListItems.Add(new ContentListItem
 			{
 				Title = response.Article.Name,
@@ -78,8 +80,13 @@ namespace SnowGrain
                 ColorCode = "#66cc88"
 
             });
+
             Device.BeginInvokeOnMainThread(() => { listView1.IsRefreshing = false; listView1.EndRefresh(); });
+			listView1.ItemsSource = null;
 			listView1.ItemsSource = contentListItems;
+			listView1.IsVisible = true;
+			base.OnAppearing();
+
 		}
 	}
 	class HomePageClass {

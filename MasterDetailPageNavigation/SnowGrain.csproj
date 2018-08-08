@@ -32,6 +32,7 @@
 
   <ItemGroup>
     <Compile Remove="XAML\MyPage.xaml.cs" />
+    <Compile Remove="XAML\ExtendedViewCellRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="XAML\ChannelGuide.xaml.cs">

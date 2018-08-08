@@ -31,9 +31,9 @@ namespace SnowGrain
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
+			var item = e.SelectedItem as MasterPageItem;
 			try
-			{
-				var item = e.SelectedItem as MasterPageItem;
+			{				
 				item.IsInProgress = true;
 				string content = await client.GetStringAsync(Url.Replace("{id}", item.Guid));
 				ArticleResponse response = JsonConvert.DeserializeObject<ArticleResponse>(content);
@@ -41,7 +41,12 @@ namespace SnowGrain
 				if (item != null)
 				{					
 					Utility.Articles = response;
-					Detail = new NavigationPage((Page)Activator.CreateInstance(Utility.GetTargetType(response.value[0].TemplateName == "Page Data" ? response.value[1].TemplateName : response.value[0].TemplateName)));
+					if (response.value != null && response.value.Count > 0)
+					{
+						Detail = new NavigationPage((Page)Activator.CreateInstance(Utility.GetTargetType(response.value[0].TemplateName == "Page Data" ? response.value[1].TemplateName : response.value[0].TemplateName)));
+					} else {
+						Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(HomePage)));		
+					}
 					masterPage.ListView.SelectedItem = null;
 					IsPresented = false;
 					item.IsInProgress = false;
@@ -49,6 +54,7 @@ namespace SnowGrain
 				}
 			} catch(Exception e1){
 				
+                
 			}
         }
     }

@@ -16,10 +16,11 @@
     </ResourceDictionary>
   </MasterDetailPage.Resources>
   <MasterDetailPage.Master>
-  	<local:MasterPage x:Name="masterPage"/>
+  	<local:MasterPage x:Name="masterPage"/>        
   </MasterDetailPage.Master>
-	<MasterDetailPage.Detail>
+	<MasterDetailPage.Detail>        
 		<NavigationPage>
+            
             <NavigationPage.Title>SnowGrain</NavigationPage.Title>
 			<x:Arguments>
 				<local:HomePage />
