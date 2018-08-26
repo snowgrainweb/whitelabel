@@ -1,5 +1,5 @@
 ﻿using System;
-namespace SnowGrain
+namespace WhiteLabel
 {
     public class ImageData
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
-namespace SnowGrain
+namespace WhiteLabel
 {
 	public class MasterPageItem: INotifyPropertyChanged
 	{

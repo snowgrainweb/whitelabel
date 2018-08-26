@@ -548,7 +548,7 @@
           "build/netstandard2.0/Xamarin.Forms.targets": {}
         }
       },
-      "SnowGrain/1.0.0": {
+      "WhiteLabel/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -562,10 +562,10 @@
           "Xamarin.Forms": "3.1.0.637273"
         },
         "compile": {
-          "bin/placeholder/SnowGrain.dll": {}
+          "bin/placeholder/WhiteLabel.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SnowGrain.dll": {}
+          "bin/placeholder/WhiteLabel.dll": {}
         }
       }
     }
@@ -1516,15 +1516,15 @@
         "xamarin.forms.nuspec"
       ]
     },
-    "SnowGrain/1.0.0": {
+    "WhiteLabel/1.0.0": {
       "type": "project",
-      "path": "../MasterDetailPageNavigation/SnowGrain.csproj",
-      "msbuildProject": "../MasterDetailPageNavigation/SnowGrain.csproj"
+      "path": "../MasterDetailPageNavigation/WhiteLabel.csproj",
+      "msbuildProject": "../MasterDetailPageNavigation/WhiteLabel.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v8.1": [
-      "SnowGrain >= 1.0.0",
+      "WhiteLabel >= 1.0.0",
       "Xamarin.Android.Support.Design >= 27.0.2.1",
       "Xamarin.Android.Support.v4 >= 27.0.2.1",
       "Xamarin.Android.Support.v7.AppCompat >= 27.0.2.1",
@@ -1539,9 +1539,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Riju/Downloads/MasterDetailPage/Droid/SnowGrain.Droid.csproj",
-      "projectName": "SnowGrain.Droid",
-      "projectPath": "/Users/Riju/Downloads/MasterDetailPage/Droid/SnowGrain.Droid.csproj",
+      "projectUniqueName": "/Users/Riju/Downloads/MasterDetailPage/Droid/WhiteLabel.Droid.csproj",
+      "projectName": "WhiteLabel.Droid",
+      "projectPath": "/Users/Riju/Downloads/MasterDetailPage/Droid/WhiteLabel.Droid.csproj",
       "packagesPath": "/Users/Riju/.nuget/packages/",
       "outputPath": "/Users/Riju/Downloads/MasterDetailPage/Droid/obj",
       "projectStyle": "PackageReference",
@@ -1557,8 +1557,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/SnowGrain.csproj": {
-              "projectPath": "/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/SnowGrain.csproj"
+            "/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/WhiteLabel.csproj": {
+              "projectPath": "/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/WhiteLabel.csproj"
             }
           }
         }

@@ -5,7 +5,7 @@ using FFImageLoading.Forms.Touch;
 using Foundation;
 using UIKit;
 
-namespace SnowGrain.iOS
+namespace WhiteLabel.iOS
 {
 	public class Application
 	{

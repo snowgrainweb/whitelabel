@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("SnowGrain.Droid.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("WhiteLabel.Droid.Resource", IsApplication=true)]
 
-namespace SnowGrain.Droid
+namespace WhiteLabel.Droid
 {
 	
 	
@@ -26,6 +26,9 @@ namespace SnowGrain.Droid
 		
 		public partial class Drawable
 		{
+			
+			// aapt resource value: 0
+			public static int bg = 0;
 			
 			// aapt resource value: 0
 			public static int blank = 0;
@@ -56,6 +59,9 @@ namespace SnowGrain.Droid
 			
 			// aapt resource value: 0
 			public static int Resources.Designer = 0;
+			
+			// aapt resource value: 0
+			public static int search = 0;
 			
 			// aapt resource value: 0
 			public static int splash_screen = 0;

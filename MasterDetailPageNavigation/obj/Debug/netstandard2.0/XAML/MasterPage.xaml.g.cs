@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("SnowGrain.XAML.MasterPage.xaml", "XAML/MasterPage.xaml", typeof(global::SnowGrain.MasterPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("WhiteLabel.XAML.MasterPage.xaml", "XAML/MasterPage.xaml", typeof(global::WhiteLabel.MasterPage))]
 
-namespace SnowGrain {
+namespace WhiteLabel {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("XAML/MasterPage.xaml")]

@@ -9,13 +9,13 @@ using System.Globalization;
 using Newtonsoft.Json;  
 using System.Collections.ObjectModel;  
 
-namespace SnowGrain
+namespace WhiteLabel
 {
     public partial class MainPage : MasterDetailPage
     {
 
 		private readonly HttpClient client = new HttpClient();
-		private const string Url = "https://whitelabel-dxebr.d.epsilon.com/sitecore/api/ssc/aggregate/content/Items('{id}')/Children?$expand=Fields($select=Name,Value,Url)&sc_apikey={3EF5CA5D-52D4-4FCF-A614-6260D5E52522}";
+		private const string Url = "https://whitelabel-dxebr.d.epsilon.com/sitecore/api/ssc/aggregate/content/Items('{id}')/Children?language=en&$expand=Fields($select=Name,Value,Url)&sc_apikey={3EF5CA5D-52D4-4FCF-A614-6260D5E52522}";
 
         public MainPage()
         {

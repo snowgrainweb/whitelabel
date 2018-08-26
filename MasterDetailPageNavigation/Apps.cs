@@ -2,13 +2,13 @@
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-namespace SnowGrain
+namespace WhiteLabel
 {
 	public class Apps : Application
 	{
 		public Apps ()
 		{
-			MainPage = new SnowGrain.MainPage ();
+			MainPage = new WhiteLabel.MainPage ();
 		}
 
 		protected override void OnStart ()

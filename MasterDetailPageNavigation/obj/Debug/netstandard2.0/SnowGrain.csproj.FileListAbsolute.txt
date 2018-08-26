@@ -1,6 +1,3 @@
-/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/bin/Debug/netstandard2.0/SnowGrain.deps.json
-/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/bin/Debug/netstandard2.0/SnowGrain.dll
-/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/bin/Debug/netstandard2.0/SnowGrain.pdb
 /Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/XAML/ArticlesPage.xaml.g.cs
 /Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/XAML/HomePage.xaml.g.cs
 /Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/XAML/MainPage.xaml.g.cs
@@ -11,6 +8,5 @@
 /Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/SnowGrain.csproj.CoreCompileInputs.cache
 /Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/SnowGrain.AssemblyInfoInputs.cache
 /Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/SnowGrain.AssemblyInfo.cs
-/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/SnowGrain.dll
 /Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/SnowGrain.pdb

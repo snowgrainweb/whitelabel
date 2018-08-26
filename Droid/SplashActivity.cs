@@ -13,7 +13,7 @@ using Android.Support.V7.App;
 using ImageCircle.Forms.Plugin.Droid;
 using FFImageLoading.Forms.Droid;
 using CarouselView.FormsPlugin.Android;
-namespace SnowGrain.Droid
+namespace WhiteLabel.Droid
 {
 	[Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true)]
     public class SplashActivity : AppCompatActivity

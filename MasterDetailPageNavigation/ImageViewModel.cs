@@ -6,7 +6,7 @@ using System.Windows.Input;
 using FFImageLoading.Forms;
 using Xamarin.Forms;
 
-namespace SnowGrain
+namespace WhiteLabel
 {
     public class ImageViewModel : INotifyPropertyChanged
     {

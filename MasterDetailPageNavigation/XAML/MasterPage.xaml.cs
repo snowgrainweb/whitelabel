@@ -11,80 +11,80 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-namespace SnowGrain
+namespace WhiteLabel
 {
     public partial class MasterPage : ContentPage
     {
         public ListView ListView { get { return listView; } }
-		private const string Url = "https://whitelabel-dxebr.d.epsilon.com/api/sitecore/mobileapp/navigation";
-		public ObservableCollection<SnowGrain.MasterPageItem> masterpageItem { get; set; }
+		private const string Url = "https://whitelabel-dxebr.d.epsilon.com/api/sitecore/mobileapp/navigation?language=en";
+		public ObservableCollection<WhiteLabel.MasterPageItem> masterpageItem { get; set; }
 		private readonly HttpClient client = new HttpClient();
 		public bool IsInProgress = true;
 		public MasterPage()
         {
             InitializeComponent();                      
 
-			masterpageItem = new ObservableCollection<SnowGrain.MasterPageItem>();
-			masterpageItem.Add(new SnowGrain.MasterPageItem
+			masterpageItem = new ObservableCollection<WhiteLabel.MasterPageItem>();
+			masterpageItem.Add(new WhiteLabel.MasterPageItem
             {
                 Title = "Home",
-				TargetType = typeof(SnowGrain.HomePage),
+				TargetType = typeof(WhiteLabel.HomePage),
 				IconSource = "https://png.icons8.com/material/50/FFFFFF/home-page.png"
             });
 
-			masterpageItem.Add(new SnowGrain.MasterPageItem
+			masterpageItem.Add(new WhiteLabel.MasterPageItem
             {
                 Title = "Articles",
-				TargetType = typeof(SnowGrain.Articles),
+				TargetType = typeof(WhiteLabel.Articles),
 				IconSource = "https://png.icons8.com/material/50/FFFFFF/news-filled.png"
             });
 
-			masterpageItem.Add(new SnowGrain.MasterPageItem
+			masterpageItem.Add(new WhiteLabel.MasterPageItem
             {
                 Title = "Products",
-				TargetType = typeof(SnowGrain.ProductsPage),
+				TargetType = typeof(WhiteLabel.ProductsPage),
 				IconSource = "https://png.icons8.com/material/50/FFFFFF/box.png"
             });
 
-			masterpageItem.Add(new SnowGrain.MasterPageItem
+			masterpageItem.Add(new WhiteLabel.MasterPageItem
             {
                 Title = "Offers",
-				TargetType = typeof(SnowGrain.OffersPage),
+				TargetType = typeof(WhiteLabel.OffersPage),
 				IconSource = "https://png.icons8.com/material/50/FFFFFF/discount.png"
             });
 
-			masterpageItem.Add(new SnowGrain.MasterPageItem
+			masterpageItem.Add(new WhiteLabel.MasterPageItem
             {
                 Title = "Contact Us",
-				TargetType = typeof(SnowGrain.HomePage),
+				TargetType = typeof(WhiteLabel.HomePage),
 				IconSource = "https://png.icons8.com/material/50/FFFFFF/contacts.png"
             });
 
-			masterpageItem.Add(new SnowGrain.MasterPageItem
+			masterpageItem.Add(new WhiteLabel.MasterPageItem
             {
                 Title = "Privacy Policy",
-				TargetType = typeof(SnowGrain.HomePage),
+				TargetType = typeof(WhiteLabel.HomePage),
 				IconSource = "https://png.icons8.com/material/50/FFFFFF/privacy.png"
             });
 
-			masterpageItem.Add(new SnowGrain.MasterPageItem
+			masterpageItem.Add(new WhiteLabel.MasterPageItem
             {
                 Title = "M-Pay",
-				TargetType = typeof(SnowGrain.HomePage),
+				TargetType = typeof(WhiteLabel.HomePage),
 				IconSource = "https://png.icons8.com/metro/50/FFFFFF/bank-cards.png"
             });
 
-			masterpageItem.Add(new SnowGrain.MasterPageItem
+			masterpageItem.Add(new WhiteLabel.MasterPageItem
             {
                 Title = "Preferences and Settings",
-                TargetType = typeof(SnowGrain.HomePage),
+                TargetType = typeof(WhiteLabel.HomePage),
 				IconSource = "https://png.icons8.com/metro/50/FFFFFF/services.png"
             });
 
-			masterpageItem.Add(new SnowGrain.MasterPageItem
+			masterpageItem.Add(new WhiteLabel.MasterPageItem
             {
                 Title = "Login",
-				TargetType = typeof(SnowGrain.HomePage),
+				TargetType = typeof(WhiteLabel.HomePage),
 				IconSource = "https://png.icons8.com/material/50/FFFFFF/user-credentials.png"
             });
 

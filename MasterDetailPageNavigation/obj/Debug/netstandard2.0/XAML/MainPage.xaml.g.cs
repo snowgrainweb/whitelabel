@@ -8,21 +8,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("SnowGrain.XAML.MainPage.xaml", "XAML/MainPage.xaml", typeof(global::SnowGrain.MainPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("WhiteLabel.XAML.MainPage.xaml", "XAML/MainPage.xaml", typeof(global::WhiteLabel.MainPage))]
 
-namespace SnowGrain {
+namespace WhiteLabel {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("XAML/MainPage.xaml")]
     public partial class MainPage : global::Xamarin.Forms.MasterDetailPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::SnowGrain.MasterPage masterPage;
+        private global::WhiteLabel.MasterPage masterPage;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MainPage));
-            masterPage = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::SnowGrain.MasterPage>(this, "masterPage");
+            masterPage = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::WhiteLabel.MasterPage>(this, "masterPage");
         }
     }
 }

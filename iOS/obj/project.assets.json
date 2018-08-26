@@ -311,7 +311,7 @@
           "build/netstandard2.0/Xamarin.Forms.targets": {}
         }
       },
-      "SnowGrain/1.0.0": {
+      "WhiteLabel/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -325,10 +325,10 @@
           "Xamarin.Forms": "3.1.0.637273"
         },
         "compile": {
-          "bin/placeholder/SnowGrain.dll": {}
+          "bin/placeholder/WhiteLabel.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SnowGrain.dll": {}
+          "bin/placeholder/WhiteLabel.dll": {}
         }
       }
     },
@@ -620,7 +620,7 @@
           "build/netstandard2.0/Xamarin.Forms.targets": {}
         }
       },
-      "SnowGrain/1.0.0": {
+      "WhiteLabel/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -634,10 +634,10 @@
           "Xamarin.Forms": "3.1.0.637273"
         },
         "compile": {
-          "bin/placeholder/SnowGrain.dll": {}
+          "bin/placeholder/WhiteLabel.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SnowGrain.dll": {}
+          "bin/placeholder/WhiteLabel.dll": {}
         }
       }
     },
@@ -929,7 +929,7 @@
           "build/netstandard2.0/Xamarin.Forms.targets": {}
         }
       },
-      "SnowGrain/1.0.0": {
+      "WhiteLabel/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -943,10 +943,10 @@
           "Xamarin.Forms": "3.1.0.637273"
         },
         "compile": {
-          "bin/placeholder/SnowGrain.dll": {}
+          "bin/placeholder/WhiteLabel.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SnowGrain.dll": {}
+          "bin/placeholder/WhiteLabel.dll": {}
         }
       }
     },
@@ -1238,7 +1238,7 @@
           "build/netstandard2.0/Xamarin.Forms.targets": {}
         }
       },
-      "SnowGrain/1.0.0": {
+      "WhiteLabel/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -1252,10 +1252,10 @@
           "Xamarin.Forms": "3.1.0.637273"
         },
         "compile": {
-          "bin/placeholder/SnowGrain.dll": {}
+          "bin/placeholder/WhiteLabel.dll": {}
         },
         "runtime": {
-          "bin/placeholder/SnowGrain.dll": {}
+          "bin/placeholder/WhiteLabel.dll": {}
         }
       }
     }
@@ -1944,15 +1944,15 @@
         "xamarin.forms.nuspec"
       ]
     },
-    "SnowGrain/1.0.0": {
+    "WhiteLabel/1.0.0": {
       "type": "project",
-      "path": "../MasterDetailPageNavigation/SnowGrain.csproj",
-      "msbuildProject": "../MasterDetailPageNavigation/SnowGrain.csproj"
+      "path": "../MasterDetailPageNavigation/WhiteLabel.csproj",
+      "msbuildProject": "../MasterDetailPageNavigation/WhiteLabel.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
-      "SnowGrain >= 1.0.0",
+      "WhiteLabel >= 1.0.0",
       "Xamarin.Forms >= 3.1.0.637273"
     ]
   },
@@ -1962,9 +1962,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Riju/Downloads/MasterDetailPage/iOS/SnowGrain.iOS.csproj",
-      "projectName": "SnowGrain.iOS",
-      "projectPath": "/Users/Riju/Downloads/MasterDetailPage/iOS/SnowGrain.iOS.csproj",
+      "projectUniqueName": "/Users/Riju/Downloads/MasterDetailPage/iOS/WhiteLabel.iOS.csproj",
+      "projectName": "WhiteLabel.iOS",
+      "projectPath": "/Users/Riju/Downloads/MasterDetailPage/iOS/WhiteLabel.iOS.csproj",
       "packagesPath": "/Users/Riju/.nuget/packages/",
       "outputPath": "/Users/Riju/Downloads/MasterDetailPage/iOS/obj",
       "projectStyle": "PackageReference",
@@ -1980,8 +1980,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/SnowGrain.csproj": {
-              "projectPath": "/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/SnowGrain.csproj"
+            "/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/WhiteLabel.csproj": {
+              "projectPath": "/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/WhiteLabel.csproj"
             }
           }
         }

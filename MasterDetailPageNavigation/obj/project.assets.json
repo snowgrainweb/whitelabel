@@ -997,9 +997,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/SnowGrain.csproj",
-      "projectName": "SnowGrain",
-      "projectPath": "/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/SnowGrain.csproj",
+      "projectUniqueName": "/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/WhiteLabel.csproj",
+      "projectName": "WhiteLabel",
+      "projectPath": "/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/WhiteLabel.csproj",
       "packagesPath": "/Users/Riju/.nuget/packages/",
       "outputPath": "/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj",
       "projectStyle": "PackageReference",

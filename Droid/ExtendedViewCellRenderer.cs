@@ -2,13 +2,13 @@
 using System.ComponentModel;
 using Android.Graphics.Drawables;
 using Android.Views;
-using SnowGrain.CustomControls;
-using SnowGrain.Droid.CustomControls;
+using WhiteLabel.CustomControls;
+using WhiteLabel.Droid.CustomControls;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
 [assembly: ExportRenderer(typeof(ExtendedViewCell), typeof(ExtendedViewCellRenderer))]
-namespace SnowGrain.Droid.CustomControls
+namespace WhiteLabel.Droid.CustomControls
 {
 	public class ExtendedViewCellRenderer : ViewCellRenderer
     {

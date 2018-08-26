@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace SnowGrain
+namespace WhiteLabel
 {
     public partial class ProductDetail : ContentPage
     {

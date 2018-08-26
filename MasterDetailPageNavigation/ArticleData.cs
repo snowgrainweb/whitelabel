@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections;
-namespace SnowGrain
+namespace WhiteLabel
 {
     public class ArticleData
     {

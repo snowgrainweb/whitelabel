@@ -9,12 +9,12 @@ using System.Globalization;
 using Newtonsoft.Json;  
 using System.Collections.ObjectModel;  
 
-namespace SnowGrain
+namespace WhiteLabel
 {
 	public partial class Articles : ContentPage
     {
 
-		private const string Url = "https://whitelabel-dxebr.d.epsilon.com/sitecore/api/ssc/aggregate/content/Items('%7bEFD9575A-D601-4C08-A3A0-E9714D12FB73%7d')/Children?$expand=Fields($select=Name,Value,Url)&sc_apikey={3EF5CA5D-52D4-4FCF-A614-6260D5E52522}";
+		private string Url = "https://whitelabel-dxebr.d.epsilon.com/sitecore/api/ssc/aggregate/content/Items('%7bEFD9575A-D601-4C08-A3A0-E9714D12FB73%7d')/Children?language=en&$expand=Fields($select=Name,Value,Url)&sc_apikey={3EF5CA5D-52D4-4FCF-A614-6260D5E52522}";
 
 		void Handle_ItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
 		{
@@ -30,7 +30,7 @@ namespace SnowGrain
 
 		public bool IsBusy = true;
 
-		public ObservableCollection<SnowGrain.ContentListItem> contentListItems { get; set; }
+		public ObservableCollection<WhiteLabel.ContentListItem> contentListItems { get; set; }
 
 		public Articles()
         {
@@ -39,8 +39,9 @@ namespace SnowGrain
 
 		protected override async void OnAppearing() {
 			Device.BeginInvokeOnMainThread(() => { listView1.IsRefreshing = true; listView1.BeginRefresh(); });
+			Url = "https://whitelabel-dxebr.d.epsilon.com/sitecore/api/ssc/aggregate/content/Items('%7bEFD9575A-D601-4C08-A3A0-E9714D12FB73%7d')/Children?language="+Utility.getLanguageCode(GlobalData.language)+"&$expand=Fields($select=Name,Value,Url)&sc_apikey={3EF5CA5D-52D4-4FCF-A614-6260D5E52522}";
 			string content = await client.GetStringAsync(Url);
-			contentListItems = new ObservableCollection<SnowGrain.ContentListItem>();
+			contentListItems = new ObservableCollection<WhiteLabel.ContentListItem>();
 			//ArticleResponse response = Utility.Articles;
 			//System.Diagnostics.Debug.WriteLine(content);
 			contentListItems = Utility.GetItemList(content);

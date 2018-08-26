@@ -1,12 +1,13 @@
 ﻿using System;
-using SnowGrain.CustomControls;
-using SnowGrain.iOS.CustomControls;
+
+using WhiteLabel.iOS.CustomControls;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
+using WhiteLabel.CustomControls;
 
 [assembly: ExportRenderer(typeof(ExtendedViewCell), typeof(ExtendedViewCellRenderer))]
-namespace SnowGrain.iOS.CustomControls
+namespace WhiteLabel.iOS.CustomControls
 {
 	public class ExtendedViewCellRenderer : ViewCellRenderer
     {

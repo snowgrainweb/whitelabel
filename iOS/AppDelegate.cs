@@ -7,7 +7,7 @@ using UIKit;
 using CarouselView.FormsPlugin.iOS;
 using FFImageLoading.Forms.Touch;
 
-namespace SnowGrain.iOS
+namespace WhiteLabel.iOS
 {
 	[Register ("AppDelegate")]
 	public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
@@ -20,7 +20,7 @@ namespace SnowGrain.iOS
             ImageCircleRenderer.Init(); 
             CarouselViewRenderer.Init();
             CachedImageRenderer.Init();
-			LoadApplication(new SnowGrain.Apps());
+			LoadApplication(new WhiteLabel.Apps());
 			return base.FinishedLaunching (app, options);
 		}
 	}

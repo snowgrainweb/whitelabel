@@ -105,8 +105,8 @@ public class MonoPackageManager {
 
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
-		/* We need to ensure that "SnowGrain.Droid.dll" comes first in this list. */
-		"SnowGrain.Droid.dll",
+		/* We need to ensure that "WhiteLabel.Droid.dll" comes first in this list. */
+		"WhiteLabel.Droid.dll",
 		"CarouselView.FormsPlugin.Abstractions.dll",
 		"CarouselView.FormsPlugin.Android.dll",
 		"Com.Android.DeskClock.dll",
@@ -121,13 +121,13 @@ class MonoPackageManager_Resources {
 		"SkiaSharp.dll",
 		"SkiaSharp.Views.Android.dll",
 		"SkiaSharp.Views.Forms.dll",
-		"SnowGrain.dll",
 		"Syncfusion.Licensing.dll",
 		"Syncfusion.SfRating.Android.dll",
 		"Syncfusion.SfRating.XForms.Android.dll",
 		"Syncfusion.SfRating.XForms.dll",
 		"System.Net.Http.Extensions.dll",
 		"System.Net.Http.Primitives.dll",
+		"WhiteLabel.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Runtime.dll",

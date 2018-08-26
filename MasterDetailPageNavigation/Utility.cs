@@ -9,29 +9,30 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.ObjectModel;
 
-namespace SnowGrain
+namespace WhiteLabel
 {
 	public class Utility
 	{
-		private const string Url = "https://whitelabel-dxebr.d.epsilon.com/sitecore/api/ssc/aggregate/content/Items('%7b{id}%7d')/Children?$expand=Fields($select=Name,Value,Url)&sc_apikey={3EF5CA5D-52D4-4FCF-A614-6260D5E52522}";
+		private const string Url = "https://whitelabel-dxebr.d.epsilon.com/sitecore/api/ssc/aggregate/content/Items('%7b{id}%7d')/Children?language=en&$expand=Fields($select=Name,Value,Url)&sc_apikey={3EF5CA5D-52D4-4FCF-A614-6260D5E52522}";
 		public static ArticleResponse Articles { get; set; }
         private readonly HttpClient client = new HttpClient();
-		public static ObservableCollection<SnowGrain.ContentListItem> contentListItems { get; set; }
+		public static ObservableCollection<WhiteLabel.ContentListItem> contentListItems { get; set; }
         public Utility()
         {
         }
-		public static ObservableCollection<SnowGrain.ContentListItem> GetItemList(string content) {
+		public static ObservableCollection<WhiteLabel.ContentListItem> GetItemList(string content) {
 			ArticleResponse response = JsonConvert.DeserializeObject<ArticleResponse>(content);
-			contentListItems = new ObservableCollection<SnowGrain.ContentListItem>();
+			contentListItems = new ObservableCollection<WhiteLabel.ContentListItem>();
 			foreach (ArticleData adata in response.value)
             {
                 ContentListItem item = new ContentListItem();
                 item.Title = adata.TemplateName;
+				item.IsProduct = (adata.TemplateName == "Product Details");
                 item.Date = adata.Updated.ToShortDateString();
 				item.ColorCode = GetColorCodeForTemplate(adata.TemplateName);
                 foreach (NameValue pair in adata.Fields)
                 {
-					if(pair.Name == "App Description"){
+					if(pair.Name == "AppDescription"){
                         item.Content = Regex.Replace(pair.Value, "<.*?>", "");
 						item.Content = item.Content.Length <= 120 ? item.Content : item.Content.Substring(0, 117) + "...";
                     }
@@ -41,10 +42,10 @@ namespace SnowGrain
 					if(pair.Name == "App Details image" && item.Image == null){
 						item.Image = "https://whitelabel-dxebr.d.epsilon.com/sitecore" + pair.Url;
 					}
-                    if(pair.Name == "App Name") {
+                    if(pair.Name == "AppName") {
                         item.Name = pair.Value;
                     }
-                    if (pair.Name == "App Description")
+                    if (pair.Name == "AppDescription")
                     {
                         item.DetailContent = Regex.Replace(pair.Value, "<.*?>", "");
                     }
@@ -65,13 +66,14 @@ namespace SnowGrain
 			return contentListItems;
 		}
 
-		public static ObservableCollection<SnowGrain.ContentListItem> GetItemList(ArticleResponse response)
+		public static ObservableCollection<WhiteLabel.ContentListItem> GetItemList(ArticleResponse response)
         {            
-            contentListItems = new ObservableCollection<SnowGrain.ContentListItem>();
+            contentListItems = new ObservableCollection<WhiteLabel.ContentListItem>();
             foreach (ArticleData adata in response.value)
             {
                 ContentListItem item = new ContentListItem();
                 item.Title = adata.TemplateName;
+				item.IsProduct = (adata.TemplateName == "Product Details");
                 item.Date = adata.Updated.ToShortDateString();
                 item.ColorCode = GetColorCodeForTemplate(adata.TemplateName);
                 foreach (NameValue pair in adata.Fields)
@@ -84,11 +86,11 @@ namespace SnowGrain
                     {
                         item.Image = "https://whitelabel-dxebr.d.epsilon.com/sitecore" + pair.Url;
                     }
-                    if (pair.Name == "App Name")
+                    if (pair.Name == "AppName")
                     {
                         item.Name = pair.Value;
                     }
-					if (pair.Name == "App Description")
+					if (pair.Name == "AppDescription")
                     {
                         item.DetailContent = Regex.Replace(pair.Value, "<.*?>", "");
                     }
@@ -138,6 +140,17 @@ namespace SnowGrain
 					return typeof(OffersPage);
             }
 			return typeof(HomePage);
+		}
+		public static string getLanguageCode(string language) {
+			switch(language) {
+				case "Englis":
+					return "en";
+				case "Hindi":
+					return "hi-IN";
+				case "Spanish":
+					return "es-ES";
+			}
+			return "en";
 		}
     }
 	public class ArticleResponse

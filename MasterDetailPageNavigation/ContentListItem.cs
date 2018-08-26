@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using Xamarin.Forms;
 using System.Runtime.CompilerServices;
-namespace SnowGrain
+namespace WhiteLabel
 {
 	public class ContentListItem: INotifyPropertyChanged
     {
@@ -17,6 +17,7 @@ namespace SnowGrain
 		private string _Date;
 
 		private string _Name;
+		private Boolean _IsProduct;
 
 		private string _ColorCode;
 
@@ -35,6 +36,8 @@ namespace SnowGrain
 		public string ColorCode { get { return _ColorCode; } set { OnPropertyChanged("Title"); _ColorCode = value; } }
 
 		public string Name { get { return _Name; } set { OnPropertyChanged("Title"); _Name = value; }}
+
+		public Boolean IsProduct { get { return _IsProduct; } set { OnPropertyChanged("IsProduct"); _IsProduct = value; }}
 
 		protected void OnPropertyChanged(string propertyName)
         {

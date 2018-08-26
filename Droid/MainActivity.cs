@@ -11,7 +11,7 @@ using ImageCircle.Forms.Plugin.Droid;
 using FFImageLoading.Forms.Droid;
 using CarouselView.FormsPlugin.Android;
 
-namespace SnowGrain.Droid
+namespace WhiteLabel.Droid
 {
 	[Activity (Label = "White Label", Icon = "@drawable/blank", MainLauncher = false, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
@@ -22,7 +22,7 @@ namespace SnowGrain.Droid
             CachedImageRenderer.Init(true);
 			global::Xamarin.Forms.Forms.Init (this, bundle);
             ImageCircleRenderer.Init();
-			LoadApplication(new SnowGrain.Apps());
+			LoadApplication(new WhiteLabel.Apps());
 		}
 	}
 }

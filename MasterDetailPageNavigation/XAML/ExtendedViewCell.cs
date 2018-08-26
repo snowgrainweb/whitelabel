@@ -1,6 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
-namespace SnowGrain.CustomControls
+namespace WhiteLabel.CustomControls
 {
 	public class ExtendedViewCell : ViewCell
     {

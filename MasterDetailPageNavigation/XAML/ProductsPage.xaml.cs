@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.ObjectModel; 
 
-namespace SnowGrain
+namespace WhiteLabel
 {
     public partial class ProductsPage : ContentPage
     {
@@ -20,7 +20,7 @@ namespace SnowGrain
 			Navigation.PushAsync(productDetail);
 		}
 
-		private const string Url = "https://whitelabel-dxebr.d.epsilon.com/sitecore/api/ssc/aggregate/content/Items('%7b9290CF6A-F110-472E-A894-22E2238D0AFA%7d')/Children?$expand=Fields($select=Name,Value,Url)&sc_apikey={3EF5CA5D-52D4-4FCF-A614-6260D5E52522}";
+		private string Url = "https://whitelabel-dxebr.d.epsilon.com/sitecore/api/ssc/aggregate/content/Items('%7b9290CF6A-F110-472E-A894-22E2238D0AFA%7d')/Children?language=en&$expand=Fields($select=Name,Value,Url)&sc_apikey={3EF5CA5D-52D4-4FCF-A614-6260D5E52522}";
 
         private readonly HttpClient client = new HttpClient();
 
@@ -28,14 +28,21 @@ namespace SnowGrain
 
         public bool IsBusy = true;
 
-		public ObservableCollection<SnowGrain.ContentListItem> contentListItems { get; set; }
+		public ObservableCollection<WhiteLabel.ContentListItem> contentListItems { get; set; }
 
 
 		public ProductsPage()
         {
+			ToolbarItem itemStudy = new ToolbarItem
+            {
+				Icon = "search.png",
+                Order = ToolbarItemOrder.Primary,
+				Command = new Command(() => Navigation.PushAsync(new SearchPage()))
+            };
+            ToolbarItems.Add(itemStudy);
             InitializeComponent();
-			contentListItems = new ObservableCollection<SnowGrain.ContentListItem>();
-			contentListItems.Add(new SnowGrain.ContentListItem
+			contentListItems = new ObservableCollection<WhiteLabel.ContentListItem>();
+			contentListItems.Add(new WhiteLabel.ContentListItem
             {
                 Title = "Product",
                 Image = "http://www.millaboratories.in/wp-content/uploads/2015/10/banner1.png",
@@ -43,7 +50,7 @@ namespace SnowGrain
                 Date = "23-07-2018",
                 ColorCode = "#6688cc"
             });
-			contentListItems.Add(new SnowGrain.ContentListItem
+			contentListItems.Add(new WhiteLabel.ContentListItem
             {
                 Title = "Article",
                 Image = "https://www.solidworks.com/sites/default/files/2017-12/PRODUCT-CATEGORY-TECH-COM-inspection-MBD-shop%20floor-composer-edrawings-hero-001.jpg",
@@ -51,7 +58,7 @@ namespace SnowGrain
                 Date = "23-07-2018",
                 ColorCode = "#6688cc"
             });
-			contentListItems.Add(new SnowGrain.ContentListItem
+			contentListItems.Add(new WhiteLabel.ContentListItem
             {
                 Title = "Product",
                 Image = "https://yj4dfcucm3mswcd2nbkkg14m-wpengine.netdna-ssl.com/wp-content/uploads/2017/11/featureimagesArtboard-1-100.jpg",
@@ -68,8 +75,9 @@ namespace SnowGrain
         protected override async void OnAppearing()
         {
             Device.BeginInvokeOnMainThread(() => { listView1.IsRefreshing = true; listView1.BeginRefresh(); });
+			Url = "https://whitelabel-dxebr.d.epsilon.com/sitecore/api/ssc/aggregate/content/Items('%7b9290CF6A-F110-472E-A894-22E2238D0AFA%7d')/Children?language="+Utility.getLanguageCode(GlobalData.language)+"&$expand=Fields($select=Name,Value,Url)&sc_apikey={3EF5CA5D-52D4-4FCF-A614-6260D5E52522}";
             string content = await client.GetStringAsync(Url);
-			contentListItems = new ObservableCollection<SnowGrain.ContentListItem>();
+			contentListItems = new ObservableCollection<WhiteLabel.ContentListItem>();
             //ArticleResponse response = JsonConvert.DeserializeObject<ArticleResponse>(content);
             //System.Diagnostics.Debug.WriteLine(content);
 			contentListItems = Utility.GetItemList(content);
