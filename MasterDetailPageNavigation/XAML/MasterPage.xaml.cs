@@ -16,7 +16,7 @@ namespace WhiteLabel
     public partial class MasterPage : ContentPage
     {
         public ListView ListView { get { return listView; } }
-		private const string Url = "https://whitelabel-dxebr.d.epsilon.com/api/sitecore/mobileapp/navigation?language=en";
+		private const string Url = "https://whitelabel-dxebr.d.epsilon.com/api/sitecore/mobileapp/navigation?language=";
 		public ObservableCollection<WhiteLabel.MasterPageItem> masterpageItem { get; set; }
 		private readonly HttpClient client = new HttpClient();
 		public bool IsInProgress = true;
@@ -92,7 +92,8 @@ namespace WhiteLabel
         }
 		protected override async void OnAppearing()
 		{
-			string content = await client.GetStringAsync(Url);
+			var UrlD = Url + Utility.getLanguageCode(GlobalData.language);
+			string content = await client.GetStringAsync(UrlD);
             masterpageItem = new ObservableCollection<MasterPageItem>();
 			MenuItemResponse response = JsonConvert.DeserializeObject<MenuItemResponse>(content);
 			foreach(MenuItem item in response.NavigationList) {
@@ -108,7 +109,7 @@ namespace WhiteLabel
 			base.OnAppearing();
 		}
 	}
-    
+
 	class MenuItem {
 		public string Guid { get; set; }
 		public string Title { get; set; }

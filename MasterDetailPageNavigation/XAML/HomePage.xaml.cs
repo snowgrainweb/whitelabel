@@ -67,8 +67,8 @@ namespace WhiteLabel
 			}
 
 			Device.BeginInvokeOnMainThread(() => { listView1.IsRefreshing = true; listView1.BeginRefresh(); });
-			Url = Url + Utility.getLanguageCode(GlobalData.language);
-			string content = await client.GetStringAsync(Url);
+			var UrlD = Url + Utility.getLanguageCode(GlobalData.language);
+			string content = await client.GetStringAsync(UrlD);
 			HomeData response = JsonConvert.DeserializeObject<HomeData>(content);
 			contentListItems = new ObservableCollection<WhiteLabel.ContentListItem>();
 			listView1.IsVisible = false;           
