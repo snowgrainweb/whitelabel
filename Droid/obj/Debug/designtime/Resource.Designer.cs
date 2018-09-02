@@ -43,6 +43,9 @@ namespace WhiteLabel.Droid
 			public static int delivery = 0;
 			
 			// aapt resource value: 0
+			public static int fblogin = 0;
+			
+			// aapt resource value: 0
 			public static int hamburger = 0;
 			
 			// aapt resource value: 0

@@ -86,9 +86,10 @@
 /Users/Riju/Downloads/MasterDetailPage/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/optimized/connection.png
 /Users/Riju/Downloads/MasterDetailPage/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/optimized/delivery.png
 /Users/Riju/Downloads/MasterDetailPage/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/optimized/search.png
+/Users/Riju/Downloads/MasterDetailPage/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/optimized/fblogin.png
 /Users/Riju/Downloads/MasterDetailPage/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone10.4-11.2/optimized/
+/Users/Riju/Downloads/MasterDetailPage/iOS/obj/iPhoneSimulator/Debug/WhiteLabel.iOS.csprojResolveAssemblyReference.cache
 /Users/Riju/Downloads/MasterDetailPage/iOS/obj/iPhoneSimulator/Debug/WhiteLabel.iOS.csproj.CoreCompileInputs.cache
 /Users/Riju/Downloads/MasterDetailPage/iOS/obj/iPhoneSimulator/Debug/XamlC.stamp
 /Users/Riju/Downloads/MasterDetailPage/iOS/obj/iPhoneSimulator/Debug/iWhiteLabeliOS.exe
 /Users/Riju/Downloads/MasterDetailPage/iOS/obj/iPhoneSimulator/Debug/iWhiteLabeliOS.pdb
-/Users/Riju/Downloads/MasterDetailPage/iOS/obj/iPhoneSimulator/Debug/WhiteLabel.iOS.csprojResolveAssemblyReference.cache
