@@ -13,6 +13,7 @@ namespace WhiteLabel
 		{
 			NavigationPage.SetHasNavigationBar(this, false);
 			InitializeComponent();
+			picker.SelectedIndex = 0;
 		}
 
 		async void Handle_Clicked(object sender, System.EventArgs e)
