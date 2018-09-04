@@ -9,6 +9,7 @@
 /Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/XAML/OffersPage.xaml.g.cs
 /Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/XAML/ProductDetail.xaml.g.cs
 /Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/XAML/ProductsPage.xaml.g.cs
+/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/XAML/Register.xaml.g.cs
 /Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/XAML/SearchPage.xaml.g.cs
 /Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/WhiteLabel.csproj.CoreCompileInputs.cache
 /Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/WhiteLabel.AssemblyInfoInputs.cache
@@ -16,5 +17,3 @@
 /Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/WhiteLabel.dll
 /Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/WhiteLabel.pdb
-/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/WhiteLabel.csprojResolveAssemblyReference.cache
-/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/obj/Debug/netstandard2.0/XAML/Register.xaml.g.cs

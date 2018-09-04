@@ -13,14 +13,7 @@ namespace WhiteLabel
 		{
 			InitializeComponent();
 			picker.SelectedIndex = 0;
-			if(Application.Current.Properties.ContainsKey("isLoggedIn")) {
-				var id = Application.Current.Properties["isLoggedIn"];
-				if(id != null){
-					NavigateToHome();
-				}
-			}
-			NavigationPage.SetHasNavigationBar(this, false);
-
+			         
 			var tapGestureRecognizer = new TapGestureRecognizer();
             tapGestureRecognizer.Tapped += (s, e) => {
 				Handle_Clicked_1(s, e);
@@ -70,7 +63,20 @@ namespace WhiteLabel
 			NavigateToHome();
 		}
         
+		protected override async void OnAppearing()
+        {
+			if (Application.Current.Properties.ContainsKey("isLoggedIn"))
+            {
+                var id = Application.Current.Properties["isLoggedIn"];
+                if (id != null)
+                {
+                    NavigateToHome();
+                    return;
+                }
+            }
+            NavigationPage.SetHasNavigationBar(this, false);
 
+		}
 
 		void Handle_Clicked_1(object sender, System.EventArgs e)
 		{
