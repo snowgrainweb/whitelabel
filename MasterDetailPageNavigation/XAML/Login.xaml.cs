@@ -93,12 +93,11 @@ namespace WhiteLabel
 		}
 
 		private async void WebViewOnNavigated(object sender, WebNavigatedEventArgs e)
-        {
-			((WebView)sender).IsVisible = false;
+        {			
             var accessToken = ExtractAccessTokenFromUrl(e.Url);
-
             if (accessToken != "")
             {				
+				((WebView)sender).IsVisible = false;
                 var vm = new FacebookViewModel();
 
                 await vm.SetFacebookUserProfileAsync(accessToken);
