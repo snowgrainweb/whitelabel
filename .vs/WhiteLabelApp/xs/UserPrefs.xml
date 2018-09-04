@@ -2,20 +2,20 @@
   <MonoDevelop.Ide.ItemProperties.WhiteLabel.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D386A928-EA5B-4AEA-91C1-8546850332C5" automaticSigning="False" />
   <MonoDevelop.Ide.Workbench ActiveDocument="MasterDetailPageNavigation/XAML/MainPage.xaml.cs">
     <Files>
-      <File FileName="MasterDetailPageNavigation/XAML/Login.xaml.cs" Line="131" Column="57" />
+      <File FileName="MasterDetailPageNavigation/XAML/Login.xaml.cs" Line="100" Column="41" />
       <File FileName="MasterDetailPageNavigation/XAML/Register.xaml" Line="9" Column="172" />
       <File FileName="MasterDetailPageNavigation/XAML/Login.xaml" Line="2" Column="166" />
       <File FileName="MasterDetailPageNavigation/XAML/Register.xaml.cs" Line="138" Column="22" />
       <File FileName="MasterDetailPageNavigation/Utility.cs" Line="147" Column="5" />
       <File FileName="MasterDetailPageNavigation/XAML/MasterPage.xaml.cs" Line="118" Column="28" />
       <File FileName="MasterDetailPageNavigation/XAML/MasterPage.xaml" Line="30" Column="23" />
-      <File FileName="MasterDetailPageNavigation/XAML/MainPage.xaml.cs" Line="42" Column="1" />
+      <File FileName="MasterDetailPageNavigation/XAML/MainPage.xaml.cs" Line="44" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/XAML/MainPage.xaml.cs" relfile="MasterDetailPageNavigation/XAML/MainPage.xaml.cs" line="41" column="58" />
+      <Breakpoint file="/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/XAML/MainPage.xaml.cs" relfile="MasterDetailPageNavigation/XAML/MainPage.xaml.cs" line="44" column="58" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

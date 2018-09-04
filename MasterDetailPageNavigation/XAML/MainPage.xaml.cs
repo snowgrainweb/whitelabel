@@ -39,7 +39,13 @@ namespace WhiteLabel
 				ArticleResponse response = JsonConvert.DeserializeObject<ArticleResponse>(content);
 				if(item.Title == "Logout"){
 					//Application.Current.Properties["isLoggedIn"] = false;
-					Application.Current.MainPage = new Login();
+					try
+					{
+						Application.Current.MainPage = new Login();
+						return;
+					}catch (Exception ex){
+						
+					}
 				}
 				if (item != null)
 				{					
