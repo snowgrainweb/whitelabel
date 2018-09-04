@@ -38,7 +38,7 @@ namespace WhiteLabel
 				string content = await client.GetStringAsync(Url.Replace("{id}", item.Guid));
 				ArticleResponse response = JsonConvert.DeserializeObject<ArticleResponse>(content);
 				if(item.Title == "Logout"){
-					Application.Current.Properties["isLoggedIn"] = null;
+					Application.Current.Properties["isLoggedIn"] = false;
 					Application.Current.MainPage = new Login();
 				}
 				if (item != null)
