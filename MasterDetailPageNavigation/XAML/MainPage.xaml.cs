@@ -41,6 +41,7 @@ namespace WhiteLabel
 					//Application.Current.Properties["isLoggedIn"] = false;
 					try
 					{
+						Application.Current.Properties["isLoggedIn"] = null;
 						Application.Current.MainPage = new Login();
 						return;
 					}catch (Exception ex){
