@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <EmbeddedResource Remove="XAML\MyPage.xaml" />
+    <EmbeddedResource Remove="XAML\Login %28copy%29.xaml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="XAML\ContactsPage.xaml">
@@ -35,6 +36,7 @@
     <Compile Remove="XAML\MyPage.xaml.cs" />
     <Compile Remove="XAML\ExtendedViewCellRenderer.cs" />
     <Compile Remove="CS\FaceBookViewModel.cs" />
+    <Compile Remove="XAML\Login.xaml %28copy%29.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="XAML\ChannelGuide.xaml.cs">

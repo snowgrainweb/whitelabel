@@ -1,24 +1,22 @@
-﻿<Properties StartupConfiguration="{3D54620E-23F2-462B-A824-B074D41BD507}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+﻿<Properties StartupConfiguration="{94BA3405-8AC9-47A8-90B4-59DBF2D56EF0}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.WhiteLabel.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D386A928-EA5B-4AEA-91C1-8546850332C5" automaticSigning="False" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MasterDetailPageNavigation/XAML/MainPage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MasterDetailPageNavigation/XAML/MainPage.xaml.cs">
     <Files>
-      <File FileName="MasterDetailPageNavigation/XAML/Login.xaml.cs" Line="22" Column="1" />
-      <File FileName="MasterDetailPageNavigation/XAML/Login.xaml" Line="5" Column="58" />
-      <File FileName="MasterDetailPageNavigation/XAML/FacebookViewModel.cs" Line="15" Column="22" />
-      <File FileName="MasterDetailPageNavigation/XAML/FacebookProfile.cs" Line="21" Column="36" />
-      <File FileName="iOS/Main.cs" Line="18" Column="1" />
-      <File FileName="MasterDetailPageNavigation/XAML/FacebookServices.cs" Line="18" Column="109" />
-      <File FileName="MasterDetailPageNavigation/XAML/MainPage.xaml.cs" Line="26" Column="23" />
-      <File FileName="MasterDetailPageNavigation/XAML/MainPage.xaml" Line="25" Column="17" />
+      <File FileName="MasterDetailPageNavigation/XAML/Login.xaml.cs" Line="46" Column="3" />
+      <File FileName="MasterDetailPageNavigation/XAML/Register.xaml" Line="9" Column="172" />
+      <File FileName="MasterDetailPageNavigation/XAML/Login.xaml" Line="2" Column="166" />
+      <File FileName="MasterDetailPageNavigation/XAML/Register.xaml.cs" Line="138" Column="22" />
+      <File FileName="MasterDetailPageNavigation/Utility.cs" Line="147" Column="5" />
+      <File FileName="MasterDetailPageNavigation/XAML/MasterPage.xaml.cs" Line="118" Column="28" />
+      <File FileName="MasterDetailPageNavigation/XAML/MasterPage.xaml" Line="30" Column="23" />
+      <File FileName="MasterDetailPageNavigation/XAML/MainPage.xaml.cs" Line="46" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/Riju/Downloads/MasterDetailPage/MasterDetailPageNavigation/XAML/Login.xaml.cs" relfile="MasterDetailPageNavigation/XAML/Login.xaml.cs" line="22" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.WhiteLabel.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.ItemProperties.WhiteLabel.Droid PreferredExecutionTarget="Android.3d5daa457d74" />
   <MultiItemStartupConfigurations />
 </Properties>

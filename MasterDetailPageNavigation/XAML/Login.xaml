@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="WhiteLabel.Login" BackgroundImage="bg.jpg">
     <ContentPage.Content>
         <StackLayout>
-            <Picker x:Name="picker" SelectedItem="English" SelectedIndex="1" BackgroundColor="Silver" Title="Language" HorizontalOptions="End" Margin="20,20" TextColor="White" WidthRequest="100">
+            <Picker x:Name="picker" SelectedItem="English" SelectedIndex="1" BackgroundColor="#5c7982" Title="Language" HorizontalOptions="End" Margin="20,20" TextColor="White" WidthRequest="100">
                 <Picker.Items>
                     <x:String>English</x:String>
                     <x:String>Hindi</x:String>
@@ -10,15 +10,21 @@
                 </Picker.Items>
             </Picker>
             <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                <Entry x:Name="userIdField" IsPassword="false" Placeholder="User ID" WidthRequest="300" HeightRequest="50" />
-                <Entry x:Name="passwordField" IsPassword="true" Placeholder="Password" WidthRequest="300" HeightRequest="50" />
+                <Entry BackgroundColor="#5c7982" TextColor="White" x:Name="userIdField" IsPassword="false" Placeholder="User ID" WidthRequest="300" HeightRequest="50" />
+                <Entry BackgroundColor="#5c7982" TextColor="White" x:Name="passwordField" IsPassword="true" Placeholder="Password" WidthRequest="300" HeightRequest="50" />
                 <StackLayout Orientation="Horizontal">
                     <Button Text="New User" WidthRequest="150" HeightRequest="40" BorderColor="White" TextColor="White" BackgroundColor="#37484d" Clicked="Handle_Clicked_2" />
                     <Button Text="Login" Clicked="Handle_Clicked" WidthRequest="150" HeightRequest="40" BorderColor="White" TextColor="White" BackgroundColor="#37484d" />
                 </StackLayout>
-                <Button Clicked="Handle_Clicked_1" Image="fblogin.png" WidthRequest="300">
-                </Button>
+                <!--<Button Clicked="Handle_Clicked_1" Image="fblogin.png" WidthRequest="300"/>-->
+                <Image Source="fblogin.png" WidthRequest="300" x:Name="fblogin"/>
             </StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Text="Skip >>" Clicked="Handle_Clicked_3" HorizontalOptions="Fill" VerticalOptions="End" HeightRequest="40" BorderColor="White" TextColor="White" BackgroundColor="#37484d" Grid.Column="0" />
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

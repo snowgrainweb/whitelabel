@@ -16,14 +16,15 @@ namespace WhiteLabel
     public partial class MasterPage : ContentPage
     {
         public ListView ListView { get { return listView; } }
-		private const string Url = "https://whitelabel-dxebr.d.epsilon.com/api/sitecore/mobileapp/navigation?language=";
+		private string Url = "https://whitelabel-dxebr.d.epsilon.com/api/sitecore/mobileapp/navigation?language=";
 		public ObservableCollection<WhiteLabel.MasterPageItem> masterpageItem { get; set; }
 		private readonly HttpClient client = new HttpClient();
 		public bool IsInProgress = true;
 		public MasterPage()
         {
             InitializeComponent();                      
-
+			String Text = "Login";
+            
 			masterpageItem = new ObservableCollection<WhiteLabel.MasterPageItem>();
 			masterpageItem.Add(new WhiteLabel.MasterPageItem
             {
@@ -82,9 +83,9 @@ namespace WhiteLabel
             });
 
 			masterpageItem.Add(new WhiteLabel.MasterPageItem
-            {
-                Title = "Login",
-				TargetType = typeof(WhiteLabel.HomePage),
+			{				
+				Title =  Text,
+				TargetType = typeof(WhiteLabel.Login),
 				IconSource = "https://png.icons8.com/material/50/FFFFFF/user-credentials.png"
             });
 
@@ -99,7 +100,21 @@ namespace WhiteLabel
 			foreach(MenuItem item in response.NavigationList) {
 				MasterPageItem mItem = new MasterPageItem();
 				mItem.IconSource = "https://whitelabel-dxebr.d.epsilon.com/sitecore" + item.iconUrl;
-				mItem.Title = item.Title;
+				if (item.Title == "Login")
+				{
+					if (Application.Current.Properties.ContainsKey("isLoggedIn"))
+					{
+						var id = Application.Current.Properties["isLoggedIn"];
+						if (id != null)
+						{
+							mItem.Title = "Logout";
+						}
+					}
+				}
+				else
+				{
+					mItem.Title = item.Title;
+				}
 				mItem.TargetType = null;
 				mItem.Guid = item.Guid;
 				mItem.IsInProgress = false;

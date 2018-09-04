@@ -37,7 +37,10 @@ namespace WhiteLabel
 				item.IsInProgress = true;
 				string content = await client.GetStringAsync(Url.Replace("{id}", item.Guid));
 				ArticleResponse response = JsonConvert.DeserializeObject<ArticleResponse>(content);
-
+				if(item.Title == "Logout"){
+					Application.Current.Properties["isLoggedIn"] = null;
+					Application.Current.MainPage = new Login();
+				}
 				if (item != null)
 				{					
 					Utility.Articles = response;

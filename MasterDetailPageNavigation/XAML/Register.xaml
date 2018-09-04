@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="WhiteLabel.Register" BackgroundImage="bg.jpg">
+        <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Entry BackgroundColor="#5c7982" TextColor="White" x:Name="userIdField" IsPassword="false" Placeholder="User ID" WidthRequest="300" HeightRequest="50" />
+                <Entry BackgroundColor="#5c7982" TextColor="White" x:Name="passwordField" IsPassword="true" Placeholder="Password" WidthRequest="300" HeightRequest="50" />
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Register" WidthRequest="300" HeightRequest="40" BorderColor="White" TextColor="White" BackgroundColor="#37484d" Clicked="Handle_Clicked_2" />
+                </StackLayout>
+                <!--<Button Clicked="Handle_Clicked_1" Image="fblogin.png" WidthRequest="300"/>-->
+            </StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

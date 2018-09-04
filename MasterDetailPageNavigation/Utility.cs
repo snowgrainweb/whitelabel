@@ -142,6 +142,9 @@ namespace WhiteLabel
 			return typeof(HomePage);
 		}
 		public static string getLanguageCode(string language) {
+			if(language == null){
+				return "en";
+			}
 			switch(language) {
 				case "Englis":
 					return "en";

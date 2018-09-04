@@ -11,20 +11,31 @@ namespace WhiteLabel
         private readonly HttpClient client = new HttpClient();
 		public Login()
 		{
-			NavigationPage.SetHasNavigationBar(this, false);
 			InitializeComponent();
 			picker.SelectedIndex = 0;
+			if(Application.Current.Properties.ContainsKey("isLoggedIn")) {
+				var id = Application.Current.Properties["isLoggedIn"];
+				if(id != null){
+					NavigateToHome();
+				}
+			}
+			NavigationPage.SetHasNavigationBar(this, false);
+
+			var tapGestureRecognizer = new TapGestureRecognizer();
+            tapGestureRecognizer.Tapped += (s, e) => {
+				Handle_Clicked_1(s, e);
+            };
+            fblogin.GestureRecognizers.Add(tapGestureRecognizer);
 		}
 
 		async void Handle_Clicked(object sender, System.EventArgs e)
 		{
-        
+			GlobalData.language = picker.SelectedItem.ToString();
 			bool isSuccess = await DoLogin(userIdField.Text, passwordField.Text);
 			if (isSuccess)
 			{
-				HomePage productDetail = new HomePage();
-                GlobalData.language = picker.SelectedItem.ToString();
-                Navigation.PushAsync(productDetail);
+				Application.Current.Properties["isLoggedIn"] = true;
+				NavigateToHome();
 
 			}
 			else {
@@ -33,8 +44,37 @@ namespace WhiteLabel
 			}
 		}
 
+		private void NavigateToHome()
+		{
+			GlobalData.language = picker.SelectedItem.ToString();
+			MasterDetailPage fpm = new MasterDetailPage();
+
+
+			var NavStyle = new Style(typeof(NavigationPage))
+			{
+				Setters = {
+						new Setter{Property= NavigationPage.BarBackgroundColorProperty, Value="#37484d"},
+						new Setter{Property=NavigationPage.BarTextColorProperty, Value="White"}
+					}
+			};
+			Resources = new ResourceDictionary();
+			Resources.Add(NavStyle);
+			fpm.Resources = Resources;
+			fpm.Master = new MasterPage(); // You have to create a Master ContentPage()
+			fpm.Detail = new MainPage(); // You have to create a Detail ContenPage()
+			Application.Current.MainPage = fpm;
+		}
+
+		void Handle_Clicked_3(object sender, System.EventArgs e)
+		{
+			NavigateToHome();
+		}
+        
+
+
 		void Handle_Clicked_1(object sender, System.EventArgs e)
 		{
+			GlobalData.language = picker.SelectedItem.ToString();
 			var apiRequest =
                     "https://www.facebook.com/dialog/oauth?client_id="
                     + "235241537158062"
@@ -54,7 +94,7 @@ namespace WhiteLabel
 
 		private async void WebViewOnNavigated(object sender, WebNavigatedEventArgs e)
         {
-			
+			((WebView)sender).IsVisible = false;
             var accessToken = ExtractAccessTokenFromUrl(e.Url);
 
             if (accessToken != "")
@@ -69,9 +109,7 @@ namespace WhiteLabel
 					if(reg){
 						isLoggedIn = await DoLogin(vm.FacebookProfile.Email, vm.FacebookProfile.FirstName);
 						if(isLoggedIn) {
-							HomePage productDetail = new HomePage();
-                            GlobalData.language = picker.SelectedItem.ToString();
-                            Navigation.PushAsync(productDetail);
+							NavigateToHome();
 						} else {
 							DisplayAlert("Failed", "Please check the credentials entered", "OK");
 						}
@@ -79,9 +117,7 @@ namespace WhiteLabel
 						DisplayAlert("Failed Facebook Registration", "Please check the credentials entered", "OK");
 					}
 				} else {
-					HomePage productDetail = new HomePage();
-                    GlobalData.language = picker.SelectedItem.ToString();
-                    Navigation.PushAsync(productDetail);
+					NavigateToHome();
 				}
             }
         }
@@ -92,6 +128,7 @@ namespace WhiteLabel
 			LoginUrl = LoginUrl.Replace("{pswd}", Password);
 			string content = await client.GetStringAsync(LoginUrl);
 			if (content.Contains("\"Success\":true")){
+				Application.Current.Properties["isLoggedIn"] = true;
 				return true;
 			}
 			return false;
@@ -99,6 +136,9 @@ namespace WhiteLabel
 
 		async void Handle_Clicked_2(object sender, System.EventArgs e)
 		{
+			Application.Current.MainPage = new Register();
+			/*
+			GlobalData.language = picker.SelectedItem.ToString();
 			if(userIdField.Text =="" || passwordField.Text == ""){
 				DisplayAlert("Alert", "Please enter User Name and Password", "OK");
 			}
@@ -106,15 +146,13 @@ namespace WhiteLabel
 			if(reg) {
 				bool isLogged = await DoLogin(userIdField.Text, passwordField.Text);
 				if(isLogged){
-					HomePage productDetail = new HomePage();
-                    GlobalData.language = picker.SelectedItem.ToString();
-                    Navigation.PushAsync(productDetail);
+					NavigateToHome();
 				} else {
 					DisplayAlert("Login Failed", "Please check the credentials entered", "OK");
 				}
 			} else {
 				DisplayAlert("Registration Failed", "Please check the credentials entered", "OK");
-			}
+			}*/
 
 		}
         

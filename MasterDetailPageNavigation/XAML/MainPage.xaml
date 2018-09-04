@@ -22,7 +22,7 @@
 		<NavigationPage>       
             <NavigationPage.Title>WhiteLabel</NavigationPage.Title>
 			<x:Arguments>
-				<local:Login />
+				<local:HomePage />
 			</x:Arguments>
 		</NavigationPage>
 	</MasterDetailPage.Detail>
