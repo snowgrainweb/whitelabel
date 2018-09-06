@@ -105,15 +105,33 @@ namespace WhiteLabel
 					if (Application.Current.Properties.ContainsKey("isLoggedIn"))
 					{
 						var id = Application.Current.Properties["isLoggedIn"];
-						if (id != null)
+						if (id != null && id.ToString() != Boolean.FalseString)
 						{
 							mItem.Title = "Logout";
 						}
+						else
+                        {
+                            mItem.Title = item.Title;
+                        }
 					}
+					else
+                    {
+                        mItem.Title = item.Title;
+                    }
 				}
 				else
 				{
 					mItem.Title = item.Title;
+				}
+				if(item.Title == "Register"){
+					if (Application.Current.Properties.ContainsKey("isLoggedIn"))
+                    {
+                        var id = Application.Current.Properties["isLoggedIn"];
+                        if (id != null && id.ToString() != Boolean.FalseString)
+                        {
+							continue;
+                        }                        
+                    }
 				}
 				mItem.TargetType = null;
 				mItem.Guid = item.Guid;

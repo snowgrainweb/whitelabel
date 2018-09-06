@@ -37,11 +37,11 @@ namespace WhiteLabel
 				item.IsInProgress = true;
 				string content = await client.GetStringAsync(Url.Replace("{id}", item.Guid));
 				ArticleResponse response = JsonConvert.DeserializeObject<ArticleResponse>(content);
-				if(item.Title == "Logout"){
+				if(item.Title == "Logout" || item.Title == "Login"){
 					//Application.Current.Properties["isLoggedIn"] = false;
 					try
 					{
-						Application.Current.Properties["isLoggedIn"] = null;
+						Application.Current.Properties["isLoggedIn"] = Boolean.FalseString;
 						Application.Current.MainPage = new Login();
 						return;
 					}catch (Exception ex){

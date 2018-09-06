@@ -14,8 +14,8 @@
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="10"/>
-                                        <RowDefinition Height="10"/>
+                                        <RowDefinition Height="15"/>
+                                        <RowDefinition Height="15"/>
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
                                     <Image Source="{Binding Image}" Grid.Row="0" Grid.RowSpan="3" Grid.Column="0"/>

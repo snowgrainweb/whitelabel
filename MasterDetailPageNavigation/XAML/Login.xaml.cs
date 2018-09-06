@@ -21,17 +21,29 @@ namespace WhiteLabel
             fblogin.GestureRecognizers.Add(tapGestureRecognizer);
 		}
 
+		private void ShowLoading(string text = "Loading..") {
+			actIndicatorContainer.IsVisible = true;
+            actIndicator2.IsRunning = true;
+		}
+
+		private void HideLoading() {
+			actIndicatorContainer.IsVisible = false;
+            actIndicator2.IsRunning = false;
+		}
+
 		async void Handle_Clicked(object sender, System.EventArgs e)
 		{
+			ShowLoading();	
 			GlobalData.language = picker.SelectedItem.ToString();
 			bool isSuccess = await DoLogin(userIdField.Text, passwordField.Text);
 			if (isSuccess)
 			{
-				Application.Current.Properties["isLoggedIn"] = true;
+				Application.Current.Properties["isLoggedIn"] = Boolean.TrueString;
 				NavigateToHome();
 
 			}
 			else {
+				HideLoading();
 				DisplayAlert("Failed", "Please check the credentials entered", "OK");
 				return;
 			}
@@ -42,7 +54,7 @@ namespace WhiteLabel
 			GlobalData.language = picker.SelectedItem.ToString();
 			MasterDetailPage fpm = new MasterDetailPage();
 
-
+			HideLoading();
 			var NavStyle = new Style(typeof(NavigationPage))
 			{
 				Setters = {
@@ -60,6 +72,7 @@ namespace WhiteLabel
 
 		void Handle_Clicked_3(object sender, System.EventArgs e)
 		{
+			ShowLoading();
 			NavigateToHome();
 		}
         
@@ -68,7 +81,7 @@ namespace WhiteLabel
 			if (Application.Current.Properties.ContainsKey("isLoggedIn"))
             {
                 var id = Application.Current.Properties["isLoggedIn"];
-                if (id != null)
+				if (id != null && id.ToString() != Boolean.FalseString)
                 {
                     NavigateToHome();
                     return;
@@ -80,6 +93,7 @@ namespace WhiteLabel
 
 		void Handle_Clicked_1(object sender, System.EventArgs e)
 		{
+			ShowLoading();
 			GlobalData.language = picker.SelectedItem.ToString();
 			var apiRequest =
                     "https://www.facebook.com/dialog/oauth?client_id="
@@ -116,9 +130,11 @@ namespace WhiteLabel
 						if(isLoggedIn) {
 							NavigateToHome();
 						} else {
+							HideLoading();
 							DisplayAlert("Failed", "Please check the credentials entered", "OK");
 						}
 					} else {
+						HideLoading();
 						DisplayAlert("Failed Facebook Registration", "Please check the credentials entered", "OK");
 					}
 				} else {
@@ -128,14 +144,16 @@ namespace WhiteLabel
         }
 
 		private async Task<bool> DoLogin(String UserName, String Password) {
+			ShowLoading("Logging in..");
 			var LoginUrl = "https://whitelabel-dxebr.d.epsilon.com/api/sitecore/Accounts/AppLogin?Email=’{emailId}’&amp;Password=’{pswd}’";
 			LoginUrl = LoginUrl.Replace("{emailId}", UserName);
 			LoginUrl = LoginUrl.Replace("{pswd}", Password);
 			string content = await client.GetStringAsync(LoginUrl);
 			if (content.Contains("\"Success\":true")){
-				Application.Current.Properties["isLoggedIn"] = true;
+				Application.Current.Properties["isLoggedIn"] = Boolean.TrueString;
 				return true;
 			}
+			HideLoading();
 			return false;
 		}
 
@@ -163,6 +181,7 @@ namespace WhiteLabel
         
 		private async Task<bool> DoRegister(String UserName, String Password)
         {
+			ShowLoading("Registering..");
 			var RegUrl = "https://whitelabel-dxebr.d.epsilon.com/api/sitecore/Accounts/AppRegister?Email=’{emailId}’&Password=’{pswd}’&ConfirmPassword=’{pswd}’";
 			RegUrl = RegUrl.Replace("{emailId}", UserName);
 			RegUrl = RegUrl.Replace("{pswd}", Password);
@@ -171,6 +190,7 @@ namespace WhiteLabel
             {
                 return true;
             }
+			HideLoading();
             return false;
         }
 

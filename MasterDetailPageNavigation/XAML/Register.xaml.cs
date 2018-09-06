@@ -19,7 +19,8 @@ namespace WhiteLabel
             };            
         }
 		async void Handle_Clicked(object sender, System.EventArgs e)
-        {            
+        {
+			ShowLoading();
             bool isSuccess = await DoLogin(userIdField.Text, passwordField.Text);
             if (isSuccess)
             {
@@ -28,13 +29,26 @@ namespace WhiteLabel
             }
             else
             {
+				HideLoading();
                 DisplayAlert("Failed", "Please check the credentials entered", "OK");
                 return;
             }
         }
+		private void ShowLoading(string text = "Loading..")
+        {
+            actIndicatorContainer.IsVisible = true;
+            actIndicator2.IsRunning = true;
+            
+        }
 
+        private void HideLoading()
+        {
+            actIndicatorContainer.IsVisible = false;
+            actIndicator2.IsRunning = false;
+        }
         private void NavigateToHome()
         {
+			HideLoading();
 			GlobalData.language = "English";
             MasterDetailPage fpm = new MasterDetailPage();
 
@@ -128,6 +142,7 @@ namespace WhiteLabel
             string content = await client.GetStringAsync(LoginUrl);
             if (content.Contains("\"Success\":true"))
             {
+				Application.Current.Properties["isLoggedIn"] = Boolean.TrueString;
                 return true;
             }
             return false;
@@ -135,9 +150,11 @@ namespace WhiteLabel
 
         async void Handle_Clicked_2(object sender, System.EventArgs e)
         {
+			ShowLoading();
 			GlobalData.language = "English";
             if (userIdField.Text == "" || passwordField.Text == "")
             {
+				HideLoading();
                 DisplayAlert("Alert", "Please enter User Name and Password", "OK");
             }
             bool reg = await DoRegister(userIdField.Text, passwordField.Text);
@@ -150,11 +167,13 @@ namespace WhiteLabel
                 }
                 else
                 {
+					HideLoading();
                     DisplayAlert("Login Failed", "Please check the credentials entered", "OK");
                 }
             }
             else
             {
+				HideLoading();
                 DisplayAlert("Registration Failed", "Please check the credentials entered", "OK");
             }
 

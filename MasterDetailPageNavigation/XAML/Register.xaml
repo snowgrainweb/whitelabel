@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="WhiteLabel.Register" BackgroundImage="bg.jpg">
-        <ContentPage.Content>
-        <StackLayout>
-            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                <Entry BackgroundColor="#5c7982" TextColor="White" x:Name="userIdField" IsPassword="false" Placeholder="User ID" WidthRequest="300" HeightRequest="50" />
-                <Entry BackgroundColor="#5c7982" TextColor="White" x:Name="passwordField" IsPassword="true" Placeholder="Password" WidthRequest="300" HeightRequest="50" />
-                <StackLayout Orientation="Horizontal">
-                    <Button Text="Register" WidthRequest="300" HeightRequest="40" BorderColor="White" TextColor="White" BackgroundColor="#37484d" Clicked="Handle_Clicked_2" />
+    <ContentPage.Content>
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Image Margin="0,0,0,50" Source="logo.png" WidthRequest="200" HorizontalOptions="Center" />
+                    <Entry BackgroundColor="#5c7982" TextColor="White" x:Name="userIdField" IsPassword="false" Placeholder="User ID" WidthRequest="300" HeightRequest="50" />
+                    <Entry BackgroundColor="#5c7982" TextColor="White" x:Name="passwordField" IsPassword="true" Placeholder="Password" WidthRequest="300" HeightRequest="50" />
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Register" WidthRequest="300" HeightRequest="40" BorderColor="White" TextColor="White" BackgroundColor="#37484d" Clicked="Handle_Clicked_2" />
+                    </StackLayout>
+                    <!--<Button Clicked="Handle_Clicked_1" Image="fblogin.png" WidthRequest="300"/>-->
                 </StackLayout>
-                <!--<Button Clicked="Handle_Clicked_1" Image="fblogin.png" WidthRequest="300"/>-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
             </StackLayout>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-            </Grid>
-        </StackLayout>
+            <StackLayout IsVisible="false" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" x:Name="actIndicatorContainer" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Black" Opacity="0.5" WidthRequest="1500" HeightRequest="1500">
+                <ActivityIndicator x:Name="actIndicator2" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

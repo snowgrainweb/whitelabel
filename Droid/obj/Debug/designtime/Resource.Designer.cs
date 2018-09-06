@@ -55,6 +55,12 @@ namespace WhiteLabel.Droid
 			public static int ic_launcher = 0;
 			
 			// aapt resource value: 0
+			public static int lang = 0;
+			
+			// aapt resource value: 0
+			public static int logo = 0;
+			
+			// aapt resource value: 0
 			public static int reminders = 0;
 			
 			// aapt resource value: 0
