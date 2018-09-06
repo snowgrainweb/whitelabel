@@ -108,6 +108,7 @@
     <BundleResource Include="Resources\web_hi_res_512%402x.png" />
     <BundleResource Include="Resources\web_hi_res_512%403x.png" />
     <BundleResource Include="Resources\spl.jpg" />
+    <BundleResource Include="Resources\ln.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
