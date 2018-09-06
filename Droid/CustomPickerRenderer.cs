@@ -42,7 +42,7 @@ namespace PickerWithIcon.Droid
         {
             int resID = Resources.GetIdentifier(imagePath, "drawable", this.Context.PackageName);
             
-			var drawable = ContextCompat.GetDrawable(this.Context, 2130837783);
+			var drawable = ContextCompat.GetDrawable(this.Context, resID);
 
             var bitmap = ((BitmapDrawable)drawable).Bitmap;
 

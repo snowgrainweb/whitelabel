@@ -1,18 +1,19 @@
 ﻿<Properties StartupConfiguration="{94BA3405-8AC9-47A8-90B4-59DBF2D56EF0}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.WhiteLabel.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D386A928-EA5B-4AEA-91C1-8546850332C5" automaticSigning="False" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MasterDetailPageNavigation/XAML/MainPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/CustomPickerRenderer.cs">
     <Files>
       <File FileName="MasterDetailPageNavigation/XAML/SearchPage.xaml" Line="23" Column="37" />
       <File FileName="Droid/SplashActivity.cs" Line="1" Column="1" />
       <File FileName="Droid/Resources/values/styles.xml" Line="1" Column="1" />
       <File FileName="Droid/Resources/drawable/splash_screen.xml" Line="8" Column="35" />
-      <File FileName="Droid/Resources/Resource.designer.cs" Line="1" Column="1" />
-      <File FileName="Droid/CustomPickerRenderer.cs" Line="42" Column="10" />
-      <File FileName="MasterDetailPageNavigation/XAML/Login.xaml" Line="15" Column="112" />
+      <File FileName="Droid/Resources/Resource.designer.cs" Line="19" Column="31" />
+      <File FileName="Droid/CustomPickerRenderer.cs" Line="45" Column="81" />
+      <File FileName="MasterDetailPageNavigation/XAML/Login.xaml" Line="7" Column="39" />
       <File FileName="MasterDetailPageNavigation/XAML/Login.xaml.cs" Line="153" Column="71" />
       <File FileName="MasterDetailPageNavigation/XAML/Register.xaml" Line="11" Column="176" />
       <File FileName="MasterDetailPageNavigation/XAML/Register.xaml.cs" Line="145" Column="71" />
-      <File FileName="MasterDetailPageNavigation/XAML/MainPage.xaml.cs" Line="50" Column="6" />
+      <File FileName="MasterDetailPageNavigation/XAML/MainPage.xaml.cs" Line="55" Column="52" />
+      <File FileName="Droid/Resources/AboutResources.txt" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -20,6 +21,6 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.WhiteLabel.Droid PreferredExecutionTarget="Android.3d5daa457d74" />
+  <MonoDevelop.Ide.ItemProperties.WhiteLabel.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
   <MultiItemStartupConfigurations />
 </Properties>
