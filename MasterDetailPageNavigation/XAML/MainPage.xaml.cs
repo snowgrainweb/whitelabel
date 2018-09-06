@@ -48,6 +48,19 @@ namespace WhiteLabel
 						
 					}
 				}
+				if(item.Title == "Register") {
+					try
+                    {
+                        Application.Current.Properties["isLoggedIn"] = Boolean.FalseString;
+						Application.Current.MainPage = new Register();
+                        return;
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+
+				}
 				if (item != null)
 				{					
 					Utility.Articles = response;
