@@ -1,4 +1,4 @@
-/Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/android/assets/SnowGrain.Droid.dll
+/Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/android/assets/WhiteLabel.Droid.dll
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/android/assets/CarouselView.FormsPlugin.Abstractions.dll
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/android/assets/CarouselView.FormsPlugin.Android.dll
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/android/assets/Com.Android.DeskClock.dll
@@ -16,7 +16,6 @@
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/android/assets/SkiaSharp.dll
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/android/assets/SkiaSharp.Views.Android.dll
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/android/assets/SkiaSharp.Views.Forms.dll
-/Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/android/assets/SnowGrain.dll
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/android/assets/Syncfusion.Licensing.dll
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/android/assets/Syncfusion.SfRating.Android.dll
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/android/assets/Syncfusion.SfRating.XForms.Android.dll
@@ -27,6 +26,7 @@
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/android/assets/System.Net.Http.Extensions.dll
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/android/assets/System.Net.Http.Primitives.dll
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/android/assets/System.Xml.dll
+/Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/android/assets/WhiteLabel.dll
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/android/assets/Xamarin.Android.Arch.Core.Common.dll
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/android/assets/Xamarin.Android.Arch.Lifecycle.Common.dll
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/android/assets/Xamarin.Android.Arch.Lifecycle.Runtime.dll
