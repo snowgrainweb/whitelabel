@@ -72,7 +72,8 @@ namespace WhiteLabel
 				{					
 					Utility.Articles = response;
 					if (response.value != null && response.value.Count > 0)
-					{
+					{						
+						//NavigationPage((Page)Activator.CreateInstance(Utility.GetTargetType(response.value[0].TemplateName == "Page Data" ? response.value[1].TemplateName : response.value[0].TemplateName)));
 						Detail = new NavigationPage((Page)Activator.CreateInstance(Utility.GetTargetType(response.value[0].TemplateName == "Page Data" ? response.value[1].TemplateName : response.value[0].TemplateName)));
 					} else {
 						Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(HomePage)));		
@@ -83,7 +84,7 @@ namespace WhiteLabel
 
 				}
 			} catch(Exception e1){
-				
+				Console.Write(e1);
                 
 			}
         }

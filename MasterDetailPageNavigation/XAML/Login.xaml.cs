@@ -9,6 +9,12 @@ namespace WhiteLabel
 	{
 		private string Url = "https://whitelabel-dxebr.d.epsilon.com/api/sitecore/Accounts/AppLogin?Email=’{emailId}’&amp;Password=’{pswd}’";
         private readonly HttpClient client = new HttpClient();
+
+		void Handle_SelectedIndexChanged(object sender, System.EventArgs e)
+		{
+			
+		}
+
 		public Login()
 		{
 			InitializeComponent();

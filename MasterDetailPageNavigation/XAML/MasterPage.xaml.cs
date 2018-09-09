@@ -133,7 +133,7 @@ namespace WhiteLabel
                         }                        
                     }
 				}
-				mItem.TargetType = null;
+				mItem.TargetType = Utility.GetTargetType(item.Title);
 				mItem.Guid = item.Guid;
 				mItem.IsInProgress = false;
 				masterpageItem.Add(mItem);

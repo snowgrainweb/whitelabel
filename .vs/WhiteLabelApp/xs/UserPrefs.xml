@@ -1,16 +1,20 @@
-﻿<Properties StartupConfiguration="{94BA3405-8AC9-47A8-90B4-59DBF2D56EF0}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+﻿<Properties StartupConfiguration="{3D54620E-23F2-462B-A824-B074D41BD507}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.WhiteLabel.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D386A928-EA5B-4AEA-91C1-8546850332C5" automaticSigning="False" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MasterDetailPageNavigation/Apps.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MasterDetailPageNavigation/XAML/ProductsPage.xaml.cs">
     <Files>
-      <File FileName="MasterDetailPageNavigation/XAML/ContactPage.xaml" Line="14" Column="53" />
-      <File FileName="MasterDetailPageNavigation/XAML/ContactPage.xaml.cs" Line="14" Column="9" />
-      <File FileName="MasterDetailPageNavigation/XAML/ProductDetail.xaml" Line="64" Column="15" />
-      <File FileName="MasterDetailPageNavigation/XAML/Login.xaml" Line="22" Column="71" />
-      <File FileName="MasterDetailPageNavigation/XAML/Login.xaml.cs" Line="162" Column="6" />
-      <File FileName="MasterDetailPageNavigation/XAML/Register.xaml" Line="12" Column="176" />
-      <File FileName="MasterDetailPageNavigation/XAML/Register.xaml.cs" Line="157" Column="65" />
-      <File FileName="MasterDetailPageNavigation/XAML/MainPage.xaml.cs" Line="65" Column="1" />
-      <File FileName="MasterDetailPageNavigation/Apps.cs" Line="11" Column="19" />
+      <File FileName="MasterDetailPageNavigation/XAML/MainPage.xaml" Line="30" Column="1" />
+      <File FileName="MasterDetailPageNavigation/XAML/MainPage.xaml.cs" Line="87" Column="1" />
+      <File FileName="MasterDetailPageNavigation/XAML/MasterPage.xaml.cs" Line="146" Column="18" />
+      <File FileName="MasterDetailPageNavigation/XAML/Login.xaml.cs" Line="76" Column="39" />
+      <File FileName="MasterDetailPageNavigation/XAML/Login.xaml" Line="2" Column="220" />
+      <File FileName="MasterDetailPageNavigation/XAML/ContactPage.xaml" Line="29" Column="15" />
+      <File FileName="MasterDetailPageNavigation/XAML/ArticlesPage.xaml.cs" Line="76" Column="4" />
+      <File FileName="MasterDetailPageNavigation/XAML/ArticlesPage.xaml" Line="8" Column="58" />
+      <File FileName="MasterDetailPageNavigation/XAML/Register.xaml" Line="2" Column="168" />
+      <File FileName="MasterDetailPageNavigation/XAML/ContactPage.xaml.cs" Line="43" Column="10" />
+      <File FileName="MasterDetailPageNavigation/XAML/OffersPage.xaml.cs" Line="101" Column="10" />
+      <File FileName="MasterDetailPageNavigation/XAML/ProductDetail.xaml.cs" Line="1" Column="1" />
+      <File FileName="MasterDetailPageNavigation/XAML/ProductsPage.xaml.cs" Line="113" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
