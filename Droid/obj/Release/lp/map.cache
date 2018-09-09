@@ -12,7 +12,6 @@ Newtonsoft.Json
 SkiaSharp
 SkiaSharp.Views.Android
 SkiaSharp.Views.Forms
-SnowGrain
 Syncfusion.Licensing
 Syncfusion.SfRating.Android
 Syncfusion.SfRating.XForms.Android
@@ -20,6 +19,7 @@ Syncfusion.SfRating.XForms
 System.Net.Http.Extensions
 System.Net.Http.Primitives
 System.Runtime
+WhiteLabel
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Lifecycle.Common
 Xamarin.Android.Arch.Lifecycle.Runtime
@@ -46,4 +46,3 @@ Xamarin.Forms.Xaml
 netstandard
 System.Resources.ResourceManager
 System.Reflection.Extensions
-WhiteLabel

@@ -80,6 +80,7 @@
     <Compile Include="ExtendedViewCellRenderer.cs" />
     <Compile Include="CustomPickerRenderer.cs" />
     <Compile Include="Resources\drawable\Resources.Designer.cs" />
+    <Compile Include="MyEntryRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -134,6 +135,10 @@
     <AndroidResource Include="Resources\drawable\spl.jpg" />
     <AndroidResource Include="Resources\drawable\ln.png" />
     <AndroidResource Include="Resources\drawable\Resources.resx" />
+    <AndroidResource Include="Resources\drawable\call.png" />
+    <AndroidResource Include="Resources\drawable\email.png" />
+    <AndroidResource Include="Resources\drawable\facebook.png" />
+    <AndroidResource Include="Resources\drawable\back.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

@@ -61,6 +61,13 @@ namespace WhiteLabel
                     }
 
 				}
+				if(item.Title == "Contact Us") {
+					Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(ContactPage)));     
+					masterPage.ListView.SelectedItem = null;
+                    IsPresented = false;
+                    item.IsInProgress = false;
+					return;
+				}
 				if (item != null)
 				{					
 					Utility.Articles = response;

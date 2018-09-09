@@ -8,7 +8,7 @@ namespace WhiteLabel
 	{
 		public Apps ()
 		{
-			MainPage = new WhiteLabel.Login ();
+			MainPage = new NavigationPage(new WhiteLabel.Login ());
 		}
 
 		protected override void OnStart ()

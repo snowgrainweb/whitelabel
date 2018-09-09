@@ -56,6 +56,10 @@
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Debug/R.cs.flag
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Debug/R.txt
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Debug/uploadflags.txt
+/Users/Riju/Downloads/MasterDetailPage/Droid/obj/Debug/res/drawable/call.png
+/Users/Riju/Downloads/MasterDetailPage/Droid/obj/Debug/res/drawable/email.png
+/Users/Riju/Downloads/MasterDetailPage/Droid/obj/Debug/res/drawable/facebook.png
+/Users/Riju/Downloads/MasterDetailPage/Droid/obj/Debug/res/drawable/back.png
 /Users/Riju/Downloads/MasterDetailPage/Droid/bin/Debug/FFImageLoading.pdb
 /Users/Riju/Downloads/MasterDetailPage/Droid/bin/Debug/FFImageLoading.Forms.pdb
 /Users/Riju/Downloads/MasterDetailPage/Droid/bin/Debug/FFImageLoading.Forms.Platform.pdb

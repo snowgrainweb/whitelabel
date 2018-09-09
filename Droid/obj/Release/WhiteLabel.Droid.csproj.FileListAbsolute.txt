@@ -58,6 +58,11 @@
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/uploadflags.txt
 /Users/Riju/Downloads/MasterDetailPage/Droid/bin/Release/Xamarin.Forms.Core.pdb
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/linksrc/WhiteLabel.Droid.pdb
+/Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/linksrc/FFImageLoading.pdb
+/Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/linksrc/FFImageLoading.Forms.pdb
+/Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/linksrc/FFImageLoading.Forms.Platform.pdb
+/Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/linksrc/FFImageLoading.Platform.pdb
+/Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/linksrc/Mono.Android.pdb
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/linksrc/WhiteLabel.pdb
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/linksrc/Xamarin.Forms.Core.pdb
 /Users/Riju/Downloads/MasterDetailPage/Droid/obj/Release/linksrc/Xamarin.Forms.Xaml.pdb

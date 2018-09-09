@@ -68,6 +68,11 @@ namespace WhiteLabel
             Application.Current.MainPage = fpm;
         }
 
+		void Handle_Clicked_4(object sender, System.EventArgs e)
+		{
+			Navigation.PopModalAsync();
+		}
+
         void Handle_Clicked_3(object sender, System.EventArgs e)
         {
             NavigateToHome();
@@ -152,6 +157,11 @@ namespace WhiteLabel
         {
 			ShowLoading();
 			GlobalData.language = "English";
+			if(passwordField.Text != cpasswordField.Text) {
+				HideLoading();
+				DisplayAlert("Alert", "Passwords does not match!", "OK");
+				return;
+			}
             if (userIdField.Text == "" || passwordField.Text == "")
             {
 				HideLoading();

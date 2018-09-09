@@ -18,7 +18,7 @@ namespace WhiteLabel
             tapGestureRecognizer.Tapped += (s, e) => {
 				Handle_Clicked_1(s, e);
             };
-            fblogin.GestureRecognizers.Add(tapGestureRecognizer);
+            //fblogin.GestureRecognizers.Add(tapGestureRecognizer);
 		}
 
 		private void ShowLoading(string text = "Loading..") {
@@ -159,7 +159,8 @@ namespace WhiteLabel
 
 		async void Handle_Clicked_2(object sender, System.EventArgs e)
 		{
-			Application.Current.MainPage = new Register();
+			//Application.Current.MainPage = new Register();
+			Navigation.PushModalAsync(new Register());
 			/*
 			GlobalData.language = picker.SelectedItem.ToString();
 			if(userIdField.Text =="" || passwordField.Text == ""){

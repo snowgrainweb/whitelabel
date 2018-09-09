@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="WhiteLabel.Login" xmlns:controls="clr-namespace:PickerWithIcon.Controls" BackgroundImage="bg.jpg">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="WhiteLabel.Login" xmlns:controls="clr-namespace:PickerWithIcon.Controls">
     <ContentPage.Content>
         <AbsoluteLayout HorizontalOptions="FillAndExpand"
                         VerticalOptions="FillAndExpand">
             <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
-                <controls:CustomPicker Image="ln" x:Name="picker" SelectedItem="English" SelectedIndex="1" BackgroundColor="#5c7982" Title="Language" HorizontalOptions="End" Margin="20,20" TextColor="White" WidthRequest="120">
+                <controls:CustomPicker Image="lang" x:Name="picker" SelectedItem="English" SelectedIndex="1" BackgroundColor="#5c7982" Title="Language" HorizontalOptions="End" Margin="20,20" TextColor="White" WidthRequest="120">
                     <Picker.Items>
                         <x:String>English</x:String>
                         <x:String>Hindi</x:String>
@@ -16,11 +16,11 @@
                     <Entry BackgroundColor="#5c7982" TextColor="White" x:Name="userIdField" IsPassword="false" PlaceholderColor="White" Placeholder="User ID" WidthRequest="300" HeightRequest="50" />
                     <Entry BackgroundColor="#5c7982" TextColor="White" x:Name="passwordField" PlaceholderColor="White" IsPassword="true" Placeholder="Password" WidthRequest="300" HeightRequest="50" />
                     <StackLayout Orientation="Horizontal">
-                        <Button Text="New User" WidthRequest="150" HeightRequest="40" BorderColor="White" TextColor="White" BackgroundColor="#37484d" Clicked="Handle_Clicked_2" />
+                        <Button Text="Sign Up" WidthRequest="150" HeightRequest="40" BorderColor="White" TextColor="White" BackgroundColor="#37484d" Clicked="Handle_Clicked_2" />
                         <Button Text="Login" Clicked="Handle_Clicked" WidthRequest="150" HeightRequest="40" BorderColor="White" TextColor="White" BackgroundColor="#37484d" />
                     </StackLayout>
-                    <!--<Button Clicked="Handle_Clicked_1" Image="fblogin.png" WidthRequest="300"/>-->
-                    <Image Source="fblogin.png" WidthRequest="300" x:Name="fblogin" />
+                    <Button BackgroundColor="#3B5998" TextColor="White" Clicked="Handle_Clicked_1" Image="facebook.png" Text="Login with Facebook" ContentLayout="Left,10" WidthRequest="300"/>
+                    <!--<Image Source="fblogin.png" WidthRequest="300" x:Name="fblogin" />-->
                     <Label Text="Forgot password?" FontSize="Small" TextColor="#37484d" HorizontalTextAlignment="Center"/>
                 </StackLayout>
                 <Grid>
